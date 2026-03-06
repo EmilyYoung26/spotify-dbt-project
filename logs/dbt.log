@@ -132,3 +132,210 @@ Internal Error
 [0m19:05:37.595238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcaab50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b934c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b8df0d0>]}
 [0m19:05:37.595417 [debug] [MainThread]: Flushing usage events
 [0m19:05:38.483843 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:17:59.517683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3af590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b423d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b061610>]}
+
+
+============================== 13:17:59.520652 | bd9aa62e-17c5-4332-b556-47479ecbf73f ==============================
+[0m13:17:59.520652 [info ] [MainThread]: Running with dbt=1.11.5
+[0m13:17:59.520927 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'no_print': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'write_json': 'True', 'log_format': 'default', 'version_check': 'True', 'partial_parse': 'True', 'warn_error': 'None', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/emilyyoung/.dbt', 'log_cache_events': 'False', 'introspect': 'True', 'use_colors': 'True', 'fail_fast': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'invocation_command': 'dbt build --select source:spotify.raw_spotify_tracks', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'debug': 'False', 'quiet': 'False'}
+[0m13:18:04.835472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bd9aa62e-17c5-4332-b556-47479ecbf73f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11af78ed0>]}
+[0m13:18:04.855291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bd9aa62e-17c5-4332-b556-47479ecbf73f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108859350>]}
+[0m13:18:04.855709 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m13:18:04.982263 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m13:18:05.042352 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m13:18:05.042675 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/staging/sources.yml
+[0m13:18:05.075726 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two sources with the name "spotify_raw_spotify_tracks".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when looking for source("spotify", "raw_spotify_tracks").
+  
+  To fix this, change the name of one of these resources:
+  - source.spotify_analytics.spotify.raw_spotify_tracks (models/staging/sources.yml)
+  - source.spotify_analytics.spotify.raw_spotify_tracks (models/example/sources.yml)
+[0m13:18:05.083481 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 5.6186175, "process_in_blocks": "0", "process_kernel_time": 1.675087, "process_mem_max_rss": "398737408", "process_out_blocks": "0", "process_user_time": 2.60181}
+[0m13:18:05.083804 [debug] [MainThread]: Command `dbt build` failed at 13:18:05.083747 after 5.62 seconds
+[0m13:18:05.084008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3be090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b4212d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b5a64d0>]}
+[0m13:18:05.084174 [debug] [MainThread]: Flushing usage events
+[0m13:18:05.897103 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:18:38.258987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be14d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be14f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be14f50>]}
+
+
+============================== 13:18:38.261321 | 19fba11b-69b3-44be-afe3-0d03d404964d ==============================
+[0m13:18:38.261321 [info ] [MainThread]: Running with dbt=1.11.5
+[0m13:18:38.261582 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'version_check': 'True', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'invocation_command': 'dbt source freshness', 'printer_width': '80', 'indirect_selection': 'eager', 'target_path': 'None', 'no_print': 'None', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'profiles_dir': '/Users/emilyyoung/.dbt', 'write_json': 'True', 'log_cache_events': 'False', 'empty': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_format': 'default', 'partial_parse': 'True'}
+[0m13:18:40.693390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '19fba11b-69b3-44be-afe3-0d03d404964d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bac0dd0>]}
+[0m13:18:40.711779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '19fba11b-69b3-44be-afe3-0d03d404964d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092853d0>]}
+[0m13:18:40.711997 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m13:18:40.807857 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m13:18:40.855120 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m13:18:40.855382 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/staging/sources.yml
+[0m13:18:40.883150 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two sources with the name "spotify_raw_spotify_tracks".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when looking for source("spotify", "raw_spotify_tracks").
+  
+  To fix this, change the name of one of these resources:
+  - source.spotify_analytics.spotify.raw_spotify_tracks (models/staging/sources.yml)
+  - source.spotify_analytics.spotify.raw_spotify_tracks (models/example/sources.yml)
+[0m13:18:40.885168 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": false, "command_wall_clock_time": 2.6671743, "process_in_blocks": "0", "process_kernel_time": 0.905949, "process_mem_max_rss": "398147584", "process_out_blocks": "0", "process_user_time": 2.400436}
+[0m13:18:40.885364 [debug] [MainThread]: Command `dbt source freshness` failed at 13:18:40.885326 after 2.67 seconds
+[0m13:18:40.885509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be1df10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be84e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c0bcf90>]}
+[0m13:18:40.885644 [debug] [MainThread]: Flushing usage events
+[0m13:18:41.534452 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:20:21.701890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b371a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b113a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3e5090>]}
+
+
+============================== 13:20:21.703646 | e42c8c29-d743-4a16-a658-a6730f6b6fc9 ==============================
+[0m13:20:21.703646 [info ] [MainThread]: Running with dbt=1.11.5
+[0m13:20:21.703875 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'warn_error': 'None', 'empty': 'False', 'profiles_dir': '/Users/emilyyoung/.dbt', 'partial_parse': 'True', 'debug': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'static_parser': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'fail_fast': 'False', 'use_colors': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'introspect': 'True', 'invocation_command': 'dbt build --select source:spotify.raw_spotify_tracks', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'target_path': 'None'}
+[0m13:20:24.227808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e42c8c29-d743-4a16-a658-a6730f6b6fc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11af64410>]}
+[0m13:20:24.246780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e42c8c29-d743-4a16-a658-a6730f6b6fc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087e5410>]}
+[0m13:20:24.247011 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m13:20:24.342846 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m13:20:24.390065 [debug] [MainThread]: Partial parsing enabled: 4 files deleted, 1 files added, 0 files changed.
+[0m13:20:24.390334 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/staging/sources.yml
+[0m13:20:24.390534 [debug] [MainThread]: Partial parsing: deleted file: spotify_analytics://models/example/my_second_dbt_model.sql
+[0m13:20:24.390631 [debug] [MainThread]: Partial parsing: deleted file: spotify_analytics://models/example/my_first_dbt_model.sql
+[0m13:20:24.501583 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.spotify_analytics.example
+[0m13:20:24.504810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e42c8c29-d743-4a16-a658-a6730f6b6fc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b6a4990>]}
+[0m13:20:24.528165 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m13:20:24.529000 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m13:20:24.544585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e42c8c29-d743-4a16-a658-a6730f6b6fc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9bfa10>]}
+[0m13:20:24.544827 [info ] [MainThread]: Found 1 model, 1 source, 539 macros
+[0m13:20:24.545491 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:20:24.545728 [debug] [MainThread]: Command end result
+[0m13:20:24.554047 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m13:20:24.554758 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m13:20:24.556109 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m13:20:24.557968 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 2.8881388, "process_in_blocks": "0", "process_kernel_time": 1.044167, "process_mem_max_rss": "404963328", "process_out_blocks": "0", "process_user_time": 2.364219}
+[0m13:20:24.558128 [debug] [MainThread]: Command `dbt build` succeeded at 13:20:24.558096 after 2.89 seconds
+[0m13:20:24.558265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3f4fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b7cd4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1024ad950>]}
+[0m13:20:24.558384 [debug] [MainThread]: Flushing usage events
+[0m13:20:25.243396 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:21:42.936064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1357d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1a7890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c19b410>]}
+
+
+============================== 13:21:42.939041 | 008dec55-7984-40e9-8340-e7f88aeb5923 ==============================
+[0m13:21:42.939041 [info ] [MainThread]: Running with dbt=1.11.5
+[0m13:21:42.939306 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'introspect': 'True', 'profiles_dir': '/Users/emilyyoung/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'write_json': 'True', 'version_check': 'True', 'log_format': 'default', 'quiet': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'warn_error': 'None', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'static_parser': 'True', 'debug': 'False', 'empty': 'None', 'use_experimental_parser': 'False', 'fail_fast': 'False'}
+[0m13:21:42.946043 [info ] [MainThread]: dbt version: 1.11.5
+[0m13:21:42.946233 [info ] [MainThread]: python version: 3.11.14
+[0m13:21:42.946348 [info ] [MainThread]: python path: /Users/emilyyoung/.local/pipx/venvs/dbt-bigquery/bin/python
+[0m13:21:42.946443 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
+[0m13:21:45.594496 [info ] [MainThread]: Using profiles dir at /Users/emilyyoung/.dbt
+[0m13:21:45.594770 [info ] [MainThread]: Using profiles.yml file at /Users/emilyyoung/.dbt/profiles.yml
+[0m13:21:45.594883 [info ] [MainThread]: Using dbt_project.yml file at /Users/emilyyoung/spotify-dbt-project/dbt_project.yml
+[0m13:21:45.594981 [info ] [MainThread]: adapter type: bigquery
+[0m13:21:45.595065 [info ] [MainThread]: adapter version: 1.11.0
+[0m13:21:45.627583 [info ] [MainThread]: Configuration:
+[0m13:21:45.627849 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:21:45.627954 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:21:45.628049 [info ] [MainThread]: Required dependencies:
+[0m13:21:45.628228 [debug] [MainThread]: Executing "git --help"
+[0m13:21:45.664544 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:21:45.665127 [debug] [MainThread]: STDERR: "b''"
+[0m13:21:45.665296 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:21:45.665447 [info ] [MainThread]: Connection:
+[0m13:21:45.665677 [info ] [MainThread]:   method: service-account
+[0m13:21:45.665773 [info ] [MainThread]:   database: emilys-analytics
+[0m13:21:45.665864 [info ] [MainThread]:   execution_project: emilys-analytics
+[0m13:21:45.665947 [info ] [MainThread]:   schema: spotify_analytics
+[0m13:21:45.666030 [info ] [MainThread]:   location: EU
+[0m13:21:45.666114 [info ] [MainThread]:   priority: None
+[0m13:21:45.666193 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m13:21:45.666277 [info ] [MainThread]:   impersonate_service_account: None
+[0m13:21:45.666354 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m13:21:45.666436 [info ] [MainThread]:   job_retries: 1
+[0m13:21:45.666517 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m13:21:45.666596 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m13:21:45.666677 [info ] [MainThread]:   timeout_seconds: None
+[0m13:21:45.666756 [info ] [MainThread]:   client_id: None
+[0m13:21:45.666832 [info ] [MainThread]:   token_uri: None
+[0m13:21:45.666909 [info ] [MainThread]:   compute_region: None
+[0m13:21:45.666985 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m13:21:45.667060 [info ] [MainThread]:   gcs_bucket: None
+[0m13:21:45.667136 [info ] [MainThread]:   dataproc_batch: None
+[0m13:21:45.667497 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m13:21:45.767722 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m13:21:45.768137 [debug] [MainThread]: On debug: select 1 as id
+[0m13:21:45.768275 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:21:46.491167 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:234322e8-38a3-427d-a04d-a6b969078539&page=queryresults
+[0m13:21:46.706341 [debug] [MainThread]: SQL status: OK in 0.215 seconds
+[0m13:21:46.889561 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:21:46.890046 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:21:46.894366 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 3.9966931, "process_in_blocks": "0", "process_kernel_time": 1.211109, "process_mem_max_rss": "400998400", "process_out_blocks": "0", "process_user_time": 2.29717}
+[0m13:21:46.894887 [debug] [MainThread]: Command `dbt debug` succeeded at 13:21:46.894796 after 4.00 seconds
+[0m13:21:46.895143 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:21:46.895450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c13a050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1d2150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10baf4210>]}
+[0m13:21:46.895792 [debug] [MainThread]: Flushing usage events
+[0m13:21:47.582812 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:21:51.118271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb214d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb91410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bba8810>]}
+
+
+============================== 13:21:51.120870 | 071e1a99-2df3-4276-997a-8da7dc39c174 ==============================
+[0m13:21:51.120870 [info ] [MainThread]: Running with dbt=1.11.5
+[0m13:21:51.121279 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'use_colors': 'True', 'write_json': 'True', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'invocation_command': 'dbt build --select source:spotify.raw_spotify_tracks', 'log_format': 'default', 'version_check': 'True', 'static_parser': 'True', 'warn_error': 'None', 'empty': 'False', 'debug': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/emilyyoung/.dbt', 'no_print': 'None', 'introspect': 'True'}
+[0m13:21:54.457908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '071e1a99-2df3-4276-997a-8da7dc39c174', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b4e0190>]}
+[0m13:21:54.477429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '071e1a99-2df3-4276-997a-8da7dc39c174', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fc5950>]}
+[0m13:21:54.477801 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m13:21:54.594066 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m13:21:54.635691 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:21:54.635903 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:21:54.635999 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:21:54.637995 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.spotify_analytics.example
+[0m13:21:54.648136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '071e1a99-2df3-4276-997a-8da7dc39c174', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b610510>]}
+[0m13:21:54.674478 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m13:21:54.675685 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m13:21:54.686130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '071e1a99-2df3-4276-997a-8da7dc39c174', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bcf2e50>]}
+[0m13:21:54.686406 [info ] [MainThread]: Found 1 model, 1 source, 539 macros
+[0m13:21:54.687236 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:21:54.688182 [debug] [MainThread]: Command end result
+[0m13:21:54.696752 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m13:21:54.697527 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m13:21:54.698867 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m13:21:54.700893 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 3.6181173, "process_in_blocks": "0", "process_kernel_time": 1.720096, "process_mem_max_rss": "398917632", "process_out_blocks": "0", "process_user_time": 2.453155}
+[0m13:21:54.701132 [debug] [MainThread]: Command `dbt build` succeeded at 13:21:54.701090 after 3.62 seconds
+[0m13:21:54.701296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb933d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079d98d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078d1f10>]}
+[0m13:21:54.701431 [debug] [MainThread]: Flushing usage events
+[0m13:21:55.347812 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:22:05.299871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10df39550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfad410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfbcf90>]}
+
+
+============================== 13:22:05.302704 | 08f8450a-c3c1-4909-a095-3b09bdef3fa4 ==============================
+[0m13:22:05.302704 [info ] [MainThread]: Running with dbt=1.11.5
+[0m13:22:05.302987 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/emilyyoung/.dbt', 'fail_fast': 'False', 'printer_width': '80', 'quiet': 'False', 'empty': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt build --select source:spotify.raw_spotify_tracks', 'version_check': 'True', 'log_format': 'default', 'debug': 'False', 'no_print': 'None', 'introspect': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'warn_error': 'None', 'cache_selected_only': 'False', 'static_parser': 'True', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs'}
+[0m13:22:08.503185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '08f8450a-c3c1-4909-a095-3b09bdef3fa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11da9fa50>]}
+[0m13:22:08.523416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '08f8450a-c3c1-4909-a095-3b09bdef3fa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3e4cd0>]}
+[0m13:22:08.523799 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m13:22:08.637740 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m13:22:08.679919 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:22:08.680130 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:22:08.680231 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:22:08.682411 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.spotify_analytics.example
+[0m13:22:08.693110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '08f8450a-c3c1-4909-a095-3b09bdef3fa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de58090>]}
+[0m13:22:08.719481 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m13:22:08.720801 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m13:22:08.730910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '08f8450a-c3c1-4909-a095-3b09bdef3fa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e10f890>]}
+[0m13:22:08.731213 [info ] [MainThread]: Found 1 model, 1 source, 539 macros
+[0m13:22:08.732028 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:22:08.732685 [debug] [MainThread]: Command end result
+[0m13:22:08.741131 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m13:22:08.741886 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m13:22:08.743236 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m13:22:08.745330 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 3.4817183, "process_in_blocks": "0", "process_kernel_time": 1.610498, "process_mem_max_rss": "396902400", "process_out_blocks": "0", "process_user_time": 2.432629}
+[0m13:22:08.745558 [debug] [MainThread]: Command `dbt build` succeeded at 13:22:08.745518 after 3.48 seconds
+[0m13:22:08.745712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10df52750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfad2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109cc1f10>]}
+[0m13:22:08.745836 [debug] [MainThread]: Flushing usage events
+[0m13:22:09.385012 [debug] [MainThread]: An error was encountered while trying to flush usage events

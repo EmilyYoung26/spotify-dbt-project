@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: spotify
+    database: "emilys-analytics"
+    schema: spotify_analytics
+    tables:
+      - name: raw_spotify_tracks
+        description: "Raw Spotify tracks uploaded from Kaggle (spotify-dataset.csv)."
