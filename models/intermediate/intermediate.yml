@@ -1,0 +1,10 @@
+version: 2 
+
+models: 
+  - name: int_tracks_enriched
+    description: "Tracks enriched with buckets and feature groupings."
+    columns:
+      - name: track_id 
+        tests: 
+          - not_null
+          - unique
