@@ -8,6 +8,21 @@
 
 ),
 
+ranked as (
+  select *, 
+    row_number() over (
+      partition by track_id
+      order by popularity desc nulls last, track_name asc
+    ) as rn
+  from source
+),
+
+deduped as (
+  select *
+  from ranked
+  where rn = 1 
+),
+
 cleaned as ( -- This is also know as 'renamed as'.
     
   select -- keeping our string values in a chunk together.
@@ -28,7 +43,7 @@ cleaned as ( -- This is also know as 'renamed as'.
     cast(energy as float64) as energy,
     cast(tempo as float64) as tempo
 
-  from source
+  from deduped
 ),
 
 final as (
