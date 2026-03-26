@@ -7,15 +7,31 @@ with tracks as (
 
 artists as (
 
-  select artist_id, artist_name, artist_key
+  select
+    artist_key,
+    any_value(artist_id) as artist_id
   from {{ ref('dim_artists') }}
+  group by artist_key
 
 ),
 
 genres as (
 
-  select genre_id, genre
+  select
+    genre,
+    any_value(genre_id) as genre_id
   from {{ ref('dim_genres') }}
+  group by genre
+
+),
+
+albums as (
+
+  select
+    album_key,
+    any_value(album_id) as album_id
+  from {{ ref('dim_albums') }}
+  group by album_key
 
 ),
 
@@ -27,6 +43,7 @@ final as (
     -- below is the foreign keys for relationship tests
     a.artist_id,
     g.genre_id,
+    al.album_id,
 
     -- keep natural keys too (for debugging)
     t.artists,
@@ -57,6 +74,8 @@ final as (
   left join genres as g 
     on lower(trim(g.genre)) = lower(trim(t.genre))
 
+  left join albums as al
+    on al.album_key = coalesce(lower(trim(nullif(t.album_name, ''))), 'unknown')
 )
 
 select * from final

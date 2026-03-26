@@ -11632,3 +11632,2993 @@ select * from dbt_internal_unit_test_expected
 [0m15:19:22.394377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10995c390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109944a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105605e50>]}
 [0m15:19:22.394505 [debug] [MainThread]: Flushing usage events
 [0m15:19:23.033051 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:10:24.250892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109aa7590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109aa46d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b28990>]}
+
+
+============================== 17:10:24.253176 | fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b ==============================
+[0m17:10:24.253176 [info ] [MainThread]: Running with dbt=1.11.5
+[0m17:10:24.253408 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'printer_width': '80', 'partial_parse': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'log_format': 'default', 'warn_error': 'None', 'no_print': 'None', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'empty': 'False', 'debug': 'False', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'use_colors': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --select dim_albums fact_tracks', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/emilyyoung/.dbt', 'target_path': 'None'}
+[0m17:10:27.235017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119664210>]}
+[0m17:10:27.253866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106de5c90>]}
+[0m17:10:27.254074 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m17:10:27.353623 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m17:10:27.421661 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 2 files changed.
+[0m17:10:27.421924 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/marts/dim_albums.sql
+[0m17:10:27.422168 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/bridge_track_artists.sql
+[0m17:10:27.422271 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/marts.yml
+[0m17:10:27.422363 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/fact_tracks.sql
+[0m17:10:27.577949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119f48550>]}
+[0m17:10:27.615545 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m17:10:27.616377 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m17:10:27.627208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a0bfe50>]}
+[0m17:10:27.627411 [info ] [MainThread]: Found 7 models, 22 data tests, 1 source, 656 macros, 1 unit test
+[0m17:10:27.627534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119d9fed0>]}
+[0m17:10:27.628262 [info ] [MainThread]: 
+[0m17:10:27.628389 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:10:27.628482 [info ] [MainThread]: 
+[0m17:10:27.628649 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:10:27.630006 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_emilys-analytics'
+[0m17:10:27.630152 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:10:28.311287 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_emilys-analytics, now list_emilys-analytics_spotify_analytics)
+[0m17:10:28.312163 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:10:28.729919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119db5ad0>]}
+[0m17:10:28.730975 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:10:28.799692 [debug] [Thread-1 (]: Began running node model.spotify_analytics.dim_albums
+[0m17:10:28.799979 [info ] [Thread-1 (]: 1 of 2 START sql view model spotify_analytics.dim_albums ....................... [RUN]
+[0m17:10:28.800177 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_emilys-analytics_spotify_analytics, now model.spotify_analytics.dim_albums)
+[0m17:10:28.800306 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.dim_albums
+[0m17:10:28.803674 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.dim_albums"
+[0m17:10:28.804150 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.dim_albums
+[0m17:10:28.814593 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.dim_albums"
+[0m17:10:28.815108 [debug] [Thread-1 (]: On model.spotify_analytics.dim_albums: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_albums"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`dim_albums`
+  OPTIONS()
+  as with base as (
+
+    select distinct
+      album_name
+    from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+    where album_name is not null 
+      and trim(album_name) != ''
+
+)
+
+select 
+  to_hex(md5(cast(coalesce(cast(album_name as string), '_dbt_utils_surrogate_key_null_') as string))) as album_id,
+  album_name
+from base;
+
+
+[0m17:10:28.815291 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:10:29.842639 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:7af102fa-b6ff-4ae1-82e9-3706b131f145&page=queryresults
+[0m17:10:30.142703 [debug] [Thread-1 (]: SQL status: OK in 0.299 seconds
+[0m17:10:30.198084 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119f42b10>]}
+[0m17:10:30.198457 [info ] [Thread-1 (]: 1 of 2 OK created sql view model spotify_analytics.dim_albums .................. [[32mCREATE VIEW (0 processed)[0m in 1.40s]
+[0m17:10:30.198716 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.dim_albums
+[0m17:10:30.199044 [debug] [Thread-3 (]: Began running node model.spotify_analytics.fact_tracks
+[0m17:10:30.199322 [info ] [Thread-3 (]: 2 of 2 START sql view model spotify_analytics.fact_tracks ...................... [RUN]
+[0m17:10:30.199552 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.spotify_analytics.fact_tracks'
+[0m17:10:30.199697 [debug] [Thread-3 (]: Began compiling node model.spotify_analytics.fact_tracks
+[0m17:10:30.201519 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_analytics.fact_tracks"
+[0m17:10:30.201853 [debug] [Thread-3 (]: Began executing node model.spotify_analytics.fact_tracks
+[0m17:10:30.203012 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_analytics.fact_tracks"
+[0m17:10:30.203307 [debug] [Thread-3 (]: On model.spotify_analytics.fact_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.fact_tracks"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+  OPTIONS()
+  as with tracks as (
+  
+  select *
+  from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+
+),
+
+artists as (
+
+  select artist_id, artist_name, artist_key
+  from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+
+),
+
+genres as (
+
+  select genre_id, genre
+  from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+
+),
+
+albums as (
+
+  select album_id, album_name
+  from `emilys-analytics`.`spotify_analytics`.`dim_albums`
+
+),
+
+final as (
+
+  select 
+    t.track_id, 
+
+    -- below is the foreign keys for relationship tests
+    a.artist_id,
+    g.genre_id,
+    al.album_id,
+
+    -- keep natural keys too (for debugging)
+    t.artists,
+    t.genre,
+    t.track_name,
+    t.album_name, 
+
+    -- below is our measurements
+    t.popularity, 
+    t.duration_minutes,
+    t.danceability,
+    t.energy,
+    t.tempo,
+
+    -- below is our buckets 
+    t.popularity_bucket,
+    t.duration_bucket,
+    t.danceability_bucket,
+    t.energy_bucket,
+    t.tempo_bucket
+
+  from tracks as t
+
+  -- the artist join below (is a map to "primary artist" which is the first artist in the ';' separated list)
+  left join artists as a
+    on a.artist_key = lower(trim(split(coalesce(t.artists, ''), ';')[safe_offset(0)]))
+
+  left join genres as g 
+    on lower(trim(g.genre)) = lower(trim(t.genre))
+
+  left join albums as al
+    on lower(trim(al.album_name)) = lower(trim(t.album_name))
+
+)
+
+select * from final;
+
+
+[0m17:10:30.203490 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:10:31.118813 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:3d8e4a87-201e-445c-b198-4903e54b1718&page=queryresults
+[0m17:10:31.655735 [debug] [Thread-3 (]: SQL status: OK in 0.536 seconds
+[0m17:10:31.663965 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe7fcac5-ec1f-4057-a1ff-f728b6a5b82b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a377050>]}
+[0m17:10:31.664801 [info ] [Thread-3 (]: 2 of 2 OK created sql view model spotify_analytics.fact_tracks ................. [[32mCREATE VIEW (0 processed)[0m in 1.46s]
+[0m17:10:31.665355 [debug] [Thread-3 (]: Finished running node model.spotify_analytics.fact_tracks
+[0m17:10:31.666662 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:10:31.728399 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:10:31.728620 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_albums' was properly closed.
+[0m17:10:31.728723 [debug] [MainThread]: Connection 'model.spotify_analytics.fact_tracks' was properly closed.
+[0m17:10:31.728868 [info ] [MainThread]: 
+[0m17:10:31.729002 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 4.10 seconds (4.10s).
+[0m17:10:31.729319 [debug] [MainThread]: Command end result
+[0m17:10:31.742850 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m17:10:31.743584 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m17:10:31.746164 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m17:10:31.746284 [info ] [MainThread]: 
+[0m17:10:31.746425 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:10:31.746535 [info ] [MainThread]: 
+[0m17:10:31.746650 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m17:10:31.748933 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.5340967, "process_in_blocks": "0", "process_kernel_time": 1.156126, "process_mem_max_rss": "420315136", "process_out_blocks": "0", "process_user_time": 2.870476}
+[0m17:10:31.749143 [debug] [MainThread]: Command `dbt run` succeeded at 17:10:31.749102 after 7.53 seconds
+[0m17:10:31.749282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b28b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b28790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100939fd0>]}
+[0m17:10:31.749406 [debug] [MainThread]: Flushing usage events
+[0m17:10:32.418651 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:10:44.161090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3ad190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3affd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b412790>]}
+
+
+============================== 17:10:44.162811 | 5019c2fa-70bb-42c0-825c-de6e97b59978 ==============================
+[0m17:10:44.162811 [info ] [MainThread]: Running with dbt=1.11.5
+[0m17:10:44.163049 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'indirect_selection': 'eager', 'use_colors': 'True', 'profiles_dir': '/Users/emilyyoung/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'empty': 'None', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'version_check': 'True', 'fail_fast': 'False', 'introspect': 'True', 'write_json': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'log_cache_events': 'False', 'invocation_command': 'dbt test --select fact_tracks', 'warn_error': 'None', 'partial_parse': 'True', 'quiet': 'False'}
+[0m17:10:47.035201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5019c2fa-70bb-42c0-825c-de6e97b59978', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11afb6350>]}
+[0m17:10:47.055511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5019c2fa-70bb-42c0-825c-de6e97b59978', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10884ddd0>]}
+[0m17:10:47.055931 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m17:10:47.159529 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m17:10:47.215325 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:10:47.215529 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:10:47.215628 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:10:47.232424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5019c2fa-70bb-42c0-825c-de6e97b59978', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b1d22d0>]}
+[0m17:10:47.271563 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m17:10:47.272557 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m17:10:47.282807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5019c2fa-70bb-42c0-825c-de6e97b59978', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b3bf110>]}
+[0m17:10:47.283074 [info ] [MainThread]: Found 7 models, 22 data tests, 1 source, 656 macros, 1 unit test
+[0m17:10:47.283202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5019c2fa-70bb-42c0-825c-de6e97b59978', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b688950>]}
+[0m17:10:47.284074 [info ] [MainThread]: 
+[0m17:10:47.284200 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:10:47.284295 [info ] [MainThread]: 
+[0m17:10:47.284503 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:10:47.286109 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_emilys-analytics_spotify_analytics'
+[0m17:10:47.286277 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:10:47.657618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5019c2fa-70bb-42c0-825c-de6e97b59978', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ade7dd0>]}
+[0m17:10:47.658497 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:10:47.720575 [debug] [Thread-1 (]: Began running node test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f
+[0m17:10:47.720799 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m17:10:47.720965 [debug] [Thread-3 (]: Began running node test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926
+[0m17:10:47.721084 [debug] [Thread-4 (]: Began running node test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6
+[0m17:10:47.721211 [info ] [Thread-1 (]: 1 of 11 START test accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100  [RUN]
+[0m17:10:47.721379 [info ] [Thread-2 (]: 2 of 11 START test not_null_fact_tracks_album_id ............................... [RUN]
+[0m17:10:47.721520 [info ] [Thread-3 (]: 3 of 11 START test not_null_fact_tracks_genre_id ............................... [RUN]
+[0m17:10:47.721645 [info ] [Thread-4 (]: 4 of 11 START test not_null_fact_tracks_popularity ............................. [RUN]
+[0m17:10:47.721854 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_emilys-analytics_spotify_analytics, now test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f)
+[0m17:10:47.722048 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f'
+[0m17:10:47.722209 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926'
+[0m17:10:47.722349 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6'
+[0m17:10:47.722471 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f
+[0m17:10:47.722582 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m17:10:47.722688 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926
+[0m17:10:47.722790 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6
+[0m17:10:47.731057 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f"
+[0m17:10:47.734052 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"
+[0m17:10:47.735575 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926"
+[0m17:10:47.736900 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6"
+[0m17:10:47.738609 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926
+[0m17:10:47.745180 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f
+[0m17:10:47.745382 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6
+[0m17:10:47.745513 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m17:10:47.746765 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926"
+[0m17:10:47.747961 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f"
+[0m17:10:47.748896 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6"
+[0m17:10:47.749762 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"
+[0m17:10:47.750285 [debug] [Thread-3 (]: On test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select genre_id
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where genre_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:47.750504 [debug] [Thread-4 (]: On test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select popularity
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where popularity is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:47.750673 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:10:47.750868 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select album_id
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where album_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:47.750996 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:10:47.751126 [debug] [Thread-1 (]: On test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        popularity_bucket as value_field,
+        count(*) as n_records
+
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+    group by popularity_bucket
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'unknown','0-24','25-49','50-74','75-100'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:47.751314 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:10:47.835567 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:10:48.968805 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:58da86a9-8997-496e-9474-6598e307a802&page=queryresults
+[0m17:10:49.099092 [debug] [Thread-1 (]: SQL status: OK in 0.129 seconds
+[0m17:10:49.372617 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:cd34b10a-222f-4e77-84fa-aa8fdbd3d571&page=queryresults
+[0m17:10:49.479948 [info ] [Thread-1 (]: 1 of 11 PASS accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100  [[32mPASS[0m in 1.76s]
+[0m17:10:49.481227 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f
+[0m17:10:49.481761 [debug] [Thread-1 (]: Began running node test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec
+[0m17:10:49.482390 [info ] [Thread-1 (]: 5 of 11 START test not_null_fact_tracks_track_id ............................... [RUN]
+[0m17:10:49.482948 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f, now test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec)
+[0m17:10:49.483327 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec
+[0m17:10:49.489524 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec"
+[0m17:10:49.490442 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec
+[0m17:10:49.493458 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec"
+[0m17:10:49.494246 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:49.494565 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:10:49.542395 [debug] [Thread-3 (]: SQL status: OK in 0.169 seconds
+[0m17:10:49.571999 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:254ec3d2-0cbd-476c-acdd-a9f101d24724&page=queryresults
+[0m17:10:49.696140 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:8c453982-cc77-4198-aec7-5f2e5ba209c7&page=queryresults
+[0m17:10:49.732143 [debug] [Thread-4 (]: SQL status: OK in 0.160 seconds
+[0m17:10:49.844515 [debug] [Thread-2 (]: SQL status: OK in 0.147 seconds
+[0m17:10:49.850094 [info ] [Thread-3 (]: 3 of 11 PASS not_null_fact_tracks_genre_id ..................................... [[32mPASS[0m in 2.13s]
+[0m17:10:49.852510 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926
+[0m17:10:49.853459 [debug] [Thread-3 (]: Began running node test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326
+[0m17:10:49.854628 [info ] [Thread-3 (]: 6 of 11 START test popularity_between_0_and_100_fact_tracks_popularity ......... [RUN]
+[0m17:10:49.855734 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926, now test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326)
+[0m17:10:49.856242 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326
+[0m17:10:49.865343 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326"
+[0m17:10:49.866476 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326
+[0m17:10:49.870578 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326"
+[0m17:10:49.871672 [debug] [Thread-3 (]: On test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+select * 
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where popularity is not null
+ and (popularity < 0 or popularity > 100)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:49.872090 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:10:50.088818 [info ] [Thread-4 (]: 4 of 11 PASS not_null_fact_tracks_popularity ................................... [[32mPASS[0m in 2.37s]
+[0m17:10:50.089395 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6
+[0m17:10:50.089717 [debug] [Thread-4 (]: Began running node test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58
+[0m17:10:50.090074 [info ] [Thread-4 (]: 7 of 11 START test relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_  [RUN]
+[0m17:10:50.090450 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6, now test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58)
+[0m17:10:50.090728 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58
+[0m17:10:50.097624 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58"
+[0m17:10:50.098202 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58
+[0m17:10:50.101401 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58"
+[0m17:10:50.101893 [debug] [Thread-4 (]: On test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select track_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`bridge_track_artists`
+    where track_id is not null
+),
+
+parent as (
+    select track_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:50.102171 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:10:50.182288 [error] [Thread-2 (]: 2 of 11 FAIL 1 not_null_fact_tracks_album_id ................................... [[31mFAIL 1[0m in 2.46s]
+[0m17:10:50.182546 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m17:10:50.182687 [debug] [Thread-2 (]: Began running node test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4
+[0m17:10:50.182858 [info ] [Thread-2 (]: 8 of 11 START test relationships_fact_tracks_album_id__album_id__ref_dim_albums_  [RUN]
+[0m17:10:50.183018 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f, now test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4)
+[0m17:10:50.183138 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4
+[0m17:10:50.185329 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4"
+[0m17:10:50.185639 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4
+[0m17:10:50.186626 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4"
+[0m17:10:50.187046 [debug] [Thread-2 (]: On test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select album_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+    where album_id is not null
+),
+
+parent as (
+    select album_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`dim_albums`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:50.187191 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:10:51.095401 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:fc9ac49c-f405-4eea-91d0-4d889c977af2&page=queryresults
+[0m17:10:51.272063 [debug] [Thread-1 (]: SQL status: OK in 0.175 seconds
+[0m17:10:51.567604 [info ] [Thread-1 (]: 5 of 11 PASS not_null_fact_tracks_track_id ..................................... [[32mPASS[0m in 2.08s]
+[0m17:10:51.568713 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec
+[0m17:10:51.569366 [debug] [Thread-1 (]: Began running node test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7
+[0m17:10:51.569961 [info ] [Thread-1 (]: 9 of 11 START test relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_  [RUN]
+[0m17:10:51.570558 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec, now test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7)
+[0m17:10:51.571258 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7
+[0m17:10:51.580435 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7"
+[0m17:10:51.582298 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7
+[0m17:10:51.585840 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7"
+[0m17:10:51.586776 [debug] [Thread-1 (]: On test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select artist_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+    where artist_id is not null
+),
+
+parent as (
+    select artist_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:51.587197 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:10:51.657652 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:8e5b510b-9b78-4437-83d9-ca25eff24da8&page=queryresults
+[0m17:10:51.796322 [debug] [Thread-3 (]: SQL status: OK in 0.138 seconds
+[0m17:10:51.888637 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:1926e45b-ad63-4a77-ad2d-324044b3f321&page=queryresults
+[0m17:10:51.930533 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:0ebcd358-0705-48e4-8ff8-f45ef80d3de7&page=queryresults
+[0m17:10:52.036771 [debug] [Thread-2 (]: SQL status: OK in 0.147 seconds
+[0m17:10:52.085441 [debug] [Thread-4 (]: SQL status: OK in 0.154 seconds
+[0m17:10:52.097170 [info ] [Thread-3 (]: 6 of 11 PASS popularity_between_0_and_100_fact_tracks_popularity ............... [[32mPASS[0m in 2.24s]
+[0m17:10:52.098140 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326
+[0m17:10:52.098795 [debug] [Thread-3 (]: Began running node test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511
+[0m17:10:52.099604 [info ] [Thread-3 (]: 10 of 11 START test relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_  [RUN]
+[0m17:10:52.100394 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326, now test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511)
+[0m17:10:52.100938 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511
+[0m17:10:52.109371 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511"
+[0m17:10:52.110223 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511
+[0m17:10:52.113308 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511"
+[0m17:10:52.114200 [debug] [Thread-3 (]: On test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select genre_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+    where genre_id is not null
+),
+
+parent as (
+    select genre_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:52.114538 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:10:52.341398 [info ] [Thread-2 (]: 8 of 11 PASS relationships_fact_tracks_album_id__album_id__ref_dim_albums_ ..... [[32mPASS[0m in 2.16s]
+[0m17:10:52.342124 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4
+[0m17:10:52.342491 [debug] [Thread-2 (]: Began running node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m17:10:52.342914 [info ] [Thread-2 (]: 11 of 11 START test unique_fact_tracks_track_id ................................ [RUN]
+[0m17:10:52.343394 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4, now test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c)
+[0m17:10:52.343730 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m17:10:52.349431 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"
+[0m17:10:52.350236 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m17:10:52.352303 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"
+[0m17:10:52.353505 [debug] [Thread-2 (]: On test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:10:52.354360 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:10:52.355281 [info ] [Thread-4 (]: 7 of 11 PASS relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_  [[32mPASS[0m in 2.26s]
+[0m17:10:52.410655 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58
+[0m17:10:53.048357 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:5818dec0-d8c1-4d18-936d-265e48195397&page=queryresults
+[0m17:10:53.187564 [debug] [Thread-1 (]: SQL status: OK in 0.138 seconds
+[0m17:10:53.470211 [info ] [Thread-1 (]: 9 of 11 PASS relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_ .. [[32mPASS[0m in 1.90s]
+[0m17:10:53.471580 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7
+[0m17:10:53.618721 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:7b100cc1-4925-4aae-9835-cbddaca274a7&page=queryresults
+[0m17:10:53.748192 [debug] [Thread-3 (]: SQL status: OK in 0.128 seconds
+[0m17:10:53.823229 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:818dc764-c45a-465a-b453-0c1aabbda6a4&page=queryresults
+[0m17:10:53.981580 [debug] [Thread-2 (]: SQL status: OK in 0.157 seconds
+[0m17:10:54.059570 [info ] [Thread-3 (]: 10 of 11 PASS relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_ .... [[32mPASS[0m in 1.96s]
+[0m17:10:54.061079 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511
+[0m17:10:54.248952 [error] [Thread-2 (]: 11 of 11 FAIL 2110 unique_fact_tracks_track_id ................................. [[31mFAIL 2110[0m in 1.91s]
+[0m17:10:54.250504 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m17:10:54.253311 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:10:54.336266 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:10:54.336630 [debug] [MainThread]: Connection 'test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7' was properly closed.
+[0m17:10:54.336739 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c' was properly closed.
+[0m17:10:54.336835 [debug] [MainThread]: Connection 'test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511' was properly closed.
+[0m17:10:54.336928 [debug] [MainThread]: Connection 'test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58' was properly closed.
+[0m17:10:54.337102 [info ] [MainThread]: 
+[0m17:10:54.337240 [info ] [MainThread]: Finished running 11 data tests in 0 hours 0 minutes and 7.05 seconds (7.05s).
+[0m17:10:54.337915 [debug] [MainThread]: Command end result
+[0m17:10:54.350792 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m17:10:54.351537 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m17:10:54.354014 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m17:10:54.354145 [info ] [MainThread]: 
+[0m17:10:54.354287 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m17:10:54.354391 [info ] [MainThread]: 
+[0m17:10:54.354518 [error] [MainThread]: [31mFailure in test not_null_fact_tracks_album_id (models/marts/marts.yml)[0m
+[0m17:10:54.354639 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m17:10:54.354729 [info ] [MainThread]: 
+[0m17:10:54.354837 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/marts.yml/not_null_fact_tracks_album_id.sql
+[0m17:10:54.354932 [info ] [MainThread]: 
+[0m17:10:54.355038 [error] [MainThread]: [31mFailure in test unique_fact_tracks_track_id (models/marts/marts.yml)[0m
+[0m17:10:54.355147 [error] [MainThread]:   Got 2110 results, configured to fail if != 0
+[0m17:10:54.355241 [info ] [MainThread]: 
+[0m17:10:54.355353 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/marts.yml/unique_fact_tracks_track_id.sql
+[0m17:10:54.355453 [info ] [MainThread]: 
+[0m17:10:54.355558 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=11
+[0m17:10:54.357657 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 10.228305, "process_in_blocks": "0", "process_kernel_time": 1.320823, "process_mem_max_rss": "420200448", "process_out_blocks": "0", "process_user_time": 3.634768}
+[0m17:10:54.357838 [debug] [MainThread]: Command `dbt test` failed at 17:10:54.357803 after 10.23 seconds
+[0m17:10:54.357986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3ae290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3affd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a20a290>]}
+[0m17:10:54.358118 [debug] [MainThread]: Flushing usage events
+[0m17:10:55.001429 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:36:56.483936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e011f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0136d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0a08d0>]}
+
+
+============================== 15:36:56.488503 | ac8e8b36-4991-4bac-855b-6fa957474dfd ==============================
+[0m15:36:56.488503 [info ] [MainThread]: Running with dbt=1.11.5
+[0m15:36:56.488841 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run', 'write_json': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'partial_parse': 'True', 'debug': 'False', 'version_check': 'True', 'empty': 'False', 'profiles_dir': '/Users/emilyyoung/.dbt', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'use_colors': 'True', 'static_parser': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_format': 'default', 'log_cache_events': 'False', 'printer_width': '80', 'introspect': 'True', 'target_path': 'None', 'fail_fast': 'False'}
+[0m15:36:59.896546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dbfc150>]}
+[0m15:36:59.915376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b480dd0>]}
+[0m15:36:59.915648 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m15:37:00.019665 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m15:37:00.086125 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:37:00.086315 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:37:00.086407 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:37:00.102414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11df8bd50>]}
+[0m15:37:00.139871 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m15:37:00.140845 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m15:37:00.151624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e332790>]}
+[0m15:37:00.151831 [info ] [MainThread]: Found 7 models, 22 data tests, 1 source, 656 macros, 1 unit test
+[0m15:37:00.151958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e32a790>]}
+[0m15:37:00.152771 [info ] [MainThread]: 
+[0m15:37:00.152893 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:37:00.152981 [info ] [MainThread]: 
+[0m15:37:00.153171 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:37:00.154660 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_emilys-analytics'
+[0m15:37:00.154801 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:37:00.806171 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_emilys-analytics, now list_emilys-analytics_spotify_analytics)
+[0m15:37:00.806873 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:37:01.232584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dd19ad0>]}
+[0m15:37:01.233529 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:37:01.301655 [debug] [Thread-1 (]: Began running node model.spotify_analytics.stg_tracks
+[0m15:37:01.302018 [info ] [Thread-1 (]: 1 of 7 START sql view model spotify_analytics.stg_tracks ....................... [RUN]
+[0m15:37:01.302249 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_emilys-analytics_spotify_analytics, now model.spotify_analytics.stg_tracks)
+[0m15:37:01.302386 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.stg_tracks
+[0m15:37:01.306627 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.stg_tracks"
+[0m15:37:01.307124 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.stg_tracks
+[0m15:37:01.318048 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.stg_tracks"
+[0m15:37:01.318629 [debug] [Thread-1 (]: On model.spotify_analytics.stg_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_tracks"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`stg_tracks`
+  OPTIONS()
+  as with source as (
+    select *
+    from `emilys-analytics`.`spotify_analytics`.`raw_spotify_tracks`
+
+),
+
+ranked as (
+  select *, 
+    row_number() over (
+      partition by track_id
+      order by popularity desc nulls last, track_name asc
+    ) as rn
+  from source
+),
+
+deduped as (
+  select *
+  from ranked
+  where rn = 1 
+),
+
+cleaned as ( -- This is also know as 'renamed as'.
+    
+  select -- keeping our string values in a chunk together.
+    cast(track_id as string) as track_id,
+    cast(track_name as string) as track_name,
+    cast(artists as string) as artists,
+    cast(album_name as string) as album_name,
+
+    -- next we need to make lowercase and trim.
+    lower(trim(cast(track_genre as string))) as genre,
+
+    -- next we keep any int64 values together. 
+    cast(popularity as int64) as popularity,
+    cast(duration_ms as int64) as duration_ms,
+
+    -- keep our float64 values together. 
+    cast(danceability as float64) as danceability,
+    cast(energy as float64) as energy,
+    cast(tempo as float64) as tempo
+
+  from deduped
+),
+
+final as (
+
+  select
+    track_id,
+    track_name,
+    artists,
+    album_name,
+    genre,
+    popularity,
+    danceability,
+    energy,
+    tempo,
+    duration_ms,
+
+    
+  safe_divide(cast(duration_ms as float64), 60000)
+ as duration_minutes
+
+    from cleaned
+)
+
+select * from final;
+
+
+[0m15:37:01.318822 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:02.012555 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:f75873b8-01ce-4360-89b5-e888a89e8a3d&page=queryresults
+[0m15:37:02.355985 [debug] [Thread-1 (]: SQL status: OK in 0.342 seconds
+[0m15:37:02.417537 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e367e50>]}
+[0m15:37:02.417900 [info ] [Thread-1 (]: 1 of 7 OK created sql view model spotify_analytics.stg_tracks .................. [[32mCREATE VIEW (0 processed)[0m in 1.11s]
+[0m15:37:02.418134 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.stg_tracks
+[0m15:37:02.418483 [debug] [Thread-3 (]: Began running node model.spotify_analytics.int_tracks_enriched
+[0m15:37:02.418729 [info ] [Thread-3 (]: 2 of 7 START sql view model spotify_analytics.int_tracks_enriched .............. [RUN]
+[0m15:37:02.418950 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.spotify_analytics.int_tracks_enriched'
+[0m15:37:02.419082 [debug] [Thread-3 (]: Began compiling node model.spotify_analytics.int_tracks_enriched
+[0m15:37:02.420540 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_analytics.int_tracks_enriched"
+[0m15:37:02.420832 [debug] [Thread-3 (]: Began executing node model.spotify_analytics.int_tracks_enriched
+[0m15:37:02.421986 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_analytics.int_tracks_enriched"
+[0m15:37:02.422276 [debug] [Thread-3 (]: On model.spotify_analytics.int_tracks_enriched: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.int_tracks_enriched"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+  OPTIONS()
+  as with tracks as (
+
+  select *
+  from `emilys-analytics`.`spotify_analytics`.`stg_tracks`
+
+),
+
+final as (
+
+  select
+    track_id,
+    track_name,
+    artists,
+    album_name,
+    genre,
+
+    popularity, 
+    case 
+      when popularity is null then 'unknown'
+      when popularity < 25 then '0-24'
+      when popularity < 50 then '25-49'
+      when popularity < 75 then '50-74'
+      else '75-100'
+    end as popularity_bucket,
+
+    duration_ms,
+    duration_minutes,
+    case 
+      when duration_minutes is null then 'unknown'
+      when duration_minutes < 2 then '<2 min'
+      when duration_minutes < 4 then '2-4 min'
+      when duration_minutes < 6 then '4-6 min'
+      else '6+ min'
+    end as duration_bucket,
+
+    danceability, 
+    case 
+      when danceability is null then 'unknown'
+      when danceability < 0.33 then 'low'
+      when danceability < 0.66 then 'medium'
+      else 'high'
+    end as danceability_bucket,
+
+    energy,
+    case 
+      when energy is null then 'unknown'
+      when energy < 0.33 then 'low'
+      when energy < 0.66 then 'medium'
+      else 'high'
+    end as energy_bucket,
+
+    tempo, 
+    case 
+      when tempo is null then 'unknown'
+      when tempo < 90 then 'slow'
+      when tempo < 140 then 'medium'
+      else 'fast'
+    end as tempo_bucket
+
+  from tracks 
+
+)
+
+select * from final;
+
+
+[0m15:37:02.422443 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:37:03.592063 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:64e40d45-25d9-49e0-82ab-bb9a9f021f7e&page=queryresults
+[0m15:37:03.856595 [debug] [Thread-3 (]: SQL status: OK in 0.263 seconds
+[0m15:37:03.863248 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e77ecd0>]}
+[0m15:37:03.864317 [info ] [Thread-3 (]: 2 of 7 OK created sql view model spotify_analytics.int_tracks_enriched ......... [[32mCREATE VIEW (0 processed)[0m in 1.44s]
+[0m15:37:03.864936 [debug] [Thread-3 (]: Finished running node model.spotify_analytics.int_tracks_enriched
+[0m15:37:03.865827 [debug] [Thread-2 (]: Began running node model.spotify_analytics.dim_albums
+[0m15:37:03.866201 [debug] [Thread-1 (]: Began running node model.spotify_analytics.dim_artists
+[0m15:37:03.866631 [info ] [Thread-2 (]: 3 of 7 START sql view model spotify_analytics.dim_albums ....................... [RUN]
+[0m15:37:03.867011 [debug] [Thread-4 (]: Began running node model.spotify_analytics.dim_genres
+[0m15:37:03.867444 [info ] [Thread-1 (]: 4 of 7 START sql view model spotify_analytics.dim_artists ...................... [RUN]
+[0m15:37:03.867903 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.spotify_analytics.dim_albums'
+[0m15:37:03.868258 [info ] [Thread-4 (]: 5 of 7 START sql view model spotify_analytics.dim_genres ....................... [RUN]
+[0m15:37:03.868578 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.spotify_analytics.stg_tracks, now model.spotify_analytics.dim_artists)
+[0m15:37:03.868844 [debug] [Thread-2 (]: Began compiling node model.spotify_analytics.dim_albums
+[0m15:37:03.869168 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.spotify_analytics.dim_genres'
+[0m15:37:03.869418 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.dim_artists
+[0m15:37:03.880389 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_analytics.dim_albums"
+[0m15:37:03.880621 [debug] [Thread-4 (]: Began compiling node model.spotify_analytics.dim_genres
+[0m15:37:03.882967 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.dim_artists"
+[0m15:37:03.885299 [debug] [Thread-4 (]: Writing injected SQL for node "model.spotify_analytics.dim_genres"
+[0m15:37:03.885783 [debug] [Thread-2 (]: Began executing node model.spotify_analytics.dim_albums
+[0m15:37:03.886050 [debug] [Thread-4 (]: Began executing node model.spotify_analytics.dim_genres
+[0m15:37:03.887839 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_analytics.dim_albums"
+[0m15:37:03.889351 [debug] [Thread-4 (]: Writing runtime sql for node "model.spotify_analytics.dim_genres"
+[0m15:37:03.889554 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.dim_artists
+[0m15:37:03.892240 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.dim_artists"
+[0m15:37:03.892588 [debug] [Thread-4 (]: On model.spotify_analytics.dim_genres: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_genres"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`dim_genres`
+  OPTIONS()
+  as with base as (
+
+  select distinct
+    genre
+  from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+  where genre is not null
+
+)
+
+select
+  to_hex(md5(cast(coalesce(cast(genre as string), '_dbt_utils_surrogate_key_null_') as string))) as genre_id,
+  genre
+from base;
+
+
+[0m15:37:03.892797 [debug] [Thread-2 (]: On model.spotify_analytics.dim_albums: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_albums"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`dim_albums`
+  OPTIONS()
+  as with base as (
+
+    select distinct
+      album_name
+    from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+    where album_name is not null 
+      and trim(album_name) != ''
+
+)
+
+select 
+  to_hex(md5(cast(coalesce(cast(album_name as string), '_dbt_utils_surrogate_key_null_') as string))) as album_id,
+  album_name
+from base;
+
+
+[0m15:37:03.893019 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:37:03.893216 [debug] [Thread-1 (]: On model.spotify_analytics.dim_artists: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_artists"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`dim_artists`
+  OPTIONS()
+  as with base as (
+
+  select
+    artists
+  from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+  where artists is not null
+
+), 
+
+split_artists as (
+
+  select 
+    trim(artist) as artist_name 
+  from base, 
+  unnest(split(artists, ';')) as artist
+
+),
+
+canonical as (
+
+  select
+    artist_name, 
+    lower(trim(artist_name)) as artist_key -- this is the cannonical matching key to prevent join fan out. 
+  from split_artists
+  where artist_name != ''
+
+),
+
+deduped as (
+
+  select 
+    artist_key, 
+    any_value(artist_name) as artist_name
+  from canonical
+  group by artist_key
+
+)
+
+select 
+  to_hex(md5(cast(coalesce(cast(artist_key as string), '_dbt_utils_surrogate_key_null_') as string))) as artist_id,
+  artist_name, artist_key
+from deduped 
+
+------------- NOTES -------------
+
+-- trim removes any extra spaces 
+-- unnest turns the array into multiple rows 
+-- split(artists, ';') turns artist 1;artist 2 into artist 1, artist 2;
+
+
+[0m15:37:03.893431 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:37:03.893634 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:04.853426 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:9e8ddce4-b564-4187-acee-0f90863fe510&page=queryresults
+[0m15:37:05.044184 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:43a7be90-36d8-4b59-af47-e037abee4a9c&page=queryresults
+[0m15:37:05.301140 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:74d73607-06fa-47d1-8393-7401431f39a7&page=queryresults
+[0m15:37:05.338246 [debug] [Thread-1 (]: SQL status: OK in 0.484 seconds
+[0m15:37:05.345326 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6c7d10>]}
+[0m15:37:05.345960 [info ] [Thread-1 (]: 4 of 7 OK created sql view model spotify_analytics.dim_artists ................. [[32mCREATE VIEW (0 processed)[0m in 1.48s]
+[0m15:37:05.346571 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.dim_artists
+[0m15:37:05.347123 [debug] [Thread-3 (]: Began running node model.spotify_analytics.bridge_track_artists
+[0m15:37:05.347518 [info ] [Thread-3 (]: 6 of 7 START sql view model spotify_analytics.bridge_track_artists ............. [RUN]
+[0m15:37:05.347860 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.spotify_analytics.int_tracks_enriched, now model.spotify_analytics.bridge_track_artists)
+[0m15:37:05.348112 [debug] [Thread-3 (]: Began compiling node model.spotify_analytics.bridge_track_artists
+[0m15:37:05.351348 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_analytics.bridge_track_artists"
+[0m15:37:05.352771 [debug] [Thread-3 (]: Began executing node model.spotify_analytics.bridge_track_artists
+[0m15:37:05.354917 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_analytics.bridge_track_artists"
+[0m15:37:05.355457 [debug] [Thread-3 (]: On model.spotify_analytics.bridge_track_artists: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.bridge_track_artists"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`bridge_track_artists`
+  OPTIONS()
+  as with tracks as (
+
+  select 
+    track_id, 
+    artists
+  from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+  where track_id is not null and artists is not null
+
+),
+
+split_artists as (
+
+  select 
+    track_id,
+    trim(artist) as artist_name,
+    lower(trim(artist)) as artist_key
+  from tracks,
+  unnest(split(artists, ';')) as artist
+
+), 
+
+artists_dim as (
+
+  select
+    artist_id,
+    artist_key
+  from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+
+)
+
+select
+  s.track_id,
+  a.artist_id
+from split_artists as s
+left join artists_dim as a
+  on s.artist_key = a.artist_key
+where s.artist_name != '';
+
+
+[0m15:37:05.355766 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:37:05.516525 [debug] [Thread-2 (]: SQL status: OK in 0.472 seconds
+[0m15:37:05.519284 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e3370d0>]}
+[0m15:37:05.519755 [info ] [Thread-2 (]: 3 of 7 OK created sql view model spotify_analytics.dim_albums .................. [[32mCREATE VIEW (0 processed)[0m in 1.65s]
+[0m15:37:05.520375 [debug] [Thread-2 (]: Finished running node model.spotify_analytics.dim_albums
+[0m15:37:06.186024 [debug] [Thread-4 (]: SQL status: OK in 0.877 seconds
+[0m15:37:06.192892 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6f5090>]}
+[0m15:37:06.193989 [info ] [Thread-4 (]: 5 of 7 OK created sql view model spotify_analytics.dim_genres .................. [[32mCREATE VIEW (0 processed)[0m in 2.32s]
+[0m15:37:06.194552 [debug] [Thread-4 (]: Finished running node model.spotify_analytics.dim_genres
+[0m15:37:06.195191 [debug] [Thread-1 (]: Began running node model.spotify_analytics.fact_tracks
+[0m15:37:06.195724 [info ] [Thread-1 (]: 7 of 7 START sql view model spotify_analytics.fact_tracks ...................... [RUN]
+[0m15:37:06.196192 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.spotify_analytics.dim_artists, now model.spotify_analytics.fact_tracks)
+[0m15:37:06.196492 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.fact_tracks
+[0m15:37:06.200371 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.fact_tracks"
+[0m15:37:06.201182 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.fact_tracks
+[0m15:37:06.203447 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.fact_tracks"
+[0m15:37:06.204006 [debug] [Thread-1 (]: On model.spotify_analytics.fact_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.fact_tracks"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+  OPTIONS()
+  as with tracks as (
+  
+  select *
+  from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+
+),
+
+artists as (
+
+  select artist_id, artist_name, artist_key
+  from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+
+),
+
+genres as (
+
+  select genre_id, genre
+  from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+
+),
+
+albums as (
+
+  select album_id, album_name
+  from `emilys-analytics`.`spotify_analytics`.`dim_albums`
+
+),
+
+final as (
+
+  select 
+    t.track_id, 
+
+    -- below is the foreign keys for relationship tests
+    a.artist_id,
+    g.genre_id,
+    al.album_id,
+
+    -- keep natural keys too (for debugging)
+    t.artists,
+    t.genre,
+    t.track_name,
+    t.album_name, 
+
+    -- below is our measurements
+    t.popularity, 
+    t.duration_minutes,
+    t.danceability,
+    t.energy,
+    t.tempo,
+
+    -- below is our buckets 
+    t.popularity_bucket,
+    t.duration_bucket,
+    t.danceability_bucket,
+    t.energy_bucket,
+    t.tempo_bucket
+
+  from tracks as t
+
+  -- the artist join below (is a map to "primary artist" which is the first artist in the ';' separated list)
+  left join artists as a
+    on a.artist_key = lower(trim(split(coalesce(t.artists, ''), ';')[safe_offset(0)]))
+
+  left join genres as g 
+    on lower(trim(g.genre)) = lower(trim(t.genre))
+
+  left join albums as al
+    on lower(trim(al.album_name)) = lower(trim(t.album_name))
+
+)
+
+select * from final;
+
+
+[0m15:37:06.204316 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:07.139703 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:5a82bb86-cf70-44d3-9463-b7d7237cbf7c&page=queryresults
+[0m15:37:07.416290 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:21388e20-8667-4a7b-8e2b-7a27b1dd74df&page=queryresults
+[0m15:37:07.521415 [debug] [Thread-1 (]: SQL status: OK in 0.380 seconds
+[0m15:37:07.526692 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e3d9210>]}
+[0m15:37:07.527523 [info ] [Thread-1 (]: 7 of 7 OK created sql view model spotify_analytics.fact_tracks ................. [[32mCREATE VIEW (0 processed)[0m in 1.33s]
+[0m15:37:07.527995 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.fact_tracks
+[0m15:37:07.771870 [debug] [Thread-3 (]: SQL status: OK in 0.354 seconds
+[0m15:37:07.778458 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac8e8b36-4991-4bac-855b-6fa957474dfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e6ebad0>]}
+[0m15:37:07.779258 [info ] [Thread-3 (]: 6 of 7 OK created sql view model spotify_analytics.bridge_track_artists ........ [[32mCREATE VIEW (0 processed)[0m in 2.43s]
+[0m15:37:07.779806 [debug] [Thread-3 (]: Finished running node model.spotify_analytics.bridge_track_artists
+[0m15:37:07.781286 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:37:07.844476 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:37:07.844675 [debug] [MainThread]: Connection 'model.spotify_analytics.fact_tracks' was properly closed.
+[0m15:37:07.844776 [debug] [MainThread]: Connection 'model.spotify_analytics.bridge_track_artists' was properly closed.
+[0m15:37:07.844870 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_albums' was properly closed.
+[0m15:37:07.844954 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_genres' was properly closed.
+[0m15:37:07.845104 [info ] [MainThread]: 
+[0m15:37:07.845232 [info ] [MainThread]: Finished running 7 view models in 0 hours 0 minutes and 7.69 seconds (7.69s).
+[0m15:37:07.845765 [debug] [MainThread]: Command end result
+[0m15:37:07.859936 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m15:37:07.860633 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m15:37:07.863103 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m15:37:07.863202 [info ] [MainThread]: 
+[0m15:37:07.863328 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:37:07.863424 [info ] [MainThread]: 
+[0m15:37:07.863534 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m15:37:07.870417 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.519285, "process_in_blocks": "0", "process_kernel_time": 1.245082, "process_mem_max_rss": "411729920", "process_out_blocks": "0", "process_user_time": 3.250193}
+[0m15:37:07.870665 [debug] [MainThread]: Command `dbt run` succeeded at 15:37:07.870619 after 11.52 seconds
+[0m15:37:07.870814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcf6d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e07fa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109eaded0>]}
+[0m15:37:07.870947 [debug] [MainThread]: Flushing usage events
+[0m15:37:08.758653 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:37:13.425404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfb7650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfb7d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd4f710>]}
+
+
+============================== 15:37:13.427085 | 453f8cfe-1c80-49ee-963b-82767c308f26 ==============================
+[0m15:37:13.427085 [info ] [MainThread]: Running with dbt=1.11.5
+[0m15:37:13.427332 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'target_path': 'None', 'version_check': 'True', 'profiles_dir': '/Users/emilyyoung/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'warn_error': 'None', 'printer_width': '80', 'quiet': 'False', 'debug': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'static_parser': 'True', 'partial_parse': 'True', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'fail_fast': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt test', 'log_cache_events': 'False', 'no_print': 'None'}
+[0m15:37:15.874802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '453f8cfe-1c80-49ee-963b-82767c308f26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11db5ad10>]}
+[0m15:37:15.893520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '453f8cfe-1c80-49ee-963b-82767c308f26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b458cd0>]}
+[0m15:37:15.893729 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m15:37:15.986438 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m15:37:16.038578 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:37:16.038762 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:37:16.038854 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:37:16.054787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '453f8cfe-1c80-49ee-963b-82767c308f26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ddbf890>]}
+[0m15:37:16.092021 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m15:37:16.092877 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m15:37:16.102328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '453f8cfe-1c80-49ee-963b-82767c308f26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e2d3e90>]}
+[0m15:37:16.102514 [info ] [MainThread]: Found 7 models, 22 data tests, 1 source, 656 macros, 1 unit test
+[0m15:37:16.102637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '453f8cfe-1c80-49ee-963b-82767c308f26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e0d9750>]}
+[0m15:37:16.103631 [info ] [MainThread]: 
+[0m15:37:16.103757 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:37:16.103848 [info ] [MainThread]: 
+[0m15:37:16.104039 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:37:16.105545 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_emilys-analytics_spotify_analytics'
+[0m15:37:16.105666 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:37:16.516635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '453f8cfe-1c80-49ee-963b-82767c308f26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11db8e890>]}
+[0m15:37:16.517583 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:37:16.583182 [debug] [Thread-1 (]: Began running node test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f
+[0m15:37:16.583371 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d
+[0m15:37:16.583521 [debug] [Thread-3 (]: Began running node test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00
+[0m15:37:16.583809 [debug] [Thread-4 (]: Began running node test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348
+[0m15:37:16.584032 [info ] [Thread-1 (]: 1 of 23 START test accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100  [RUN]
+[0m15:37:16.584219 [info ] [Thread-2 (]: 2 of 23 START test not_null_bridge_track_artists_artist_id ..................... [RUN]
+[0m15:37:16.584388 [info ] [Thread-3 (]: 3 of 23 START test not_null_bridge_track_artists_track_id ...................... [RUN]
+[0m15:37:16.584562 [info ] [Thread-4 (]: 4 of 23 START test not_null_dim_artists_artist_id .............................. [RUN]
+[0m15:37:16.584797 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_emilys-analytics_spotify_analytics, now test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f)
+[0m15:37:16.584992 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d'
+[0m15:37:16.585165 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00'
+[0m15:37:16.585328 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348'
+[0m15:37:16.585462 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f
+[0m15:37:16.585583 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d
+[0m15:37:16.585697 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00
+[0m15:37:16.585812 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348
+[0m15:37:16.594177 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f"
+[0m15:37:16.597134 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d"
+[0m15:37:16.598509 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00"
+[0m15:37:16.599843 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348"
+[0m15:37:16.600267 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f
+[0m15:37:16.600398 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d
+[0m15:37:16.600520 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00
+[0m15:37:16.608014 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f"
+[0m15:37:16.608152 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348
+[0m15:37:16.609104 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d"
+[0m15:37:16.609973 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00"
+[0m15:37:16.610911 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348"
+[0m15:37:16.611239 [debug] [Thread-1 (]: On test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        popularity_bucket as value_field,
+        count(*) as n_records
+
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+    group by popularity_bucket
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'unknown','0-24','25-49','50-74','75-100'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:16.611435 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:16.611594 [debug] [Thread-3 (]: On test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `emilys-analytics`.`spotify_analytics`.`bridge_track_artists`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:16.611780 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select artist_id
+from `emilys-analytics`.`spotify_analytics`.`bridge_track_artists`
+where artist_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:16.611963 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:37:16.612116 [debug] [Thread-4 (]: On test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select artist_id
+from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+where artist_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:16.652981 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:37:16.655276 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:37:17.928840 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:acb5d7f3-485d-49b0-bf51-c8c6ae2ad28d&page=queryresults
+[0m15:37:18.046401 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:1b19d51d-a5f7-4742-8337-8727af824e1f&page=queryresults
+[0m15:37:18.136549 [debug] [Thread-1 (]: SQL status: OK in 0.206 seconds
+[0m15:37:18.246278 [debug] [Thread-4 (]: SQL status: OK in 0.199 seconds
+[0m15:37:18.307962 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:b79aa95b-4c9e-4813-94ce-136f4723ae26&page=queryresults
+[0m15:37:18.440206 [debug] [Thread-3 (]: SQL status: OK in 0.131 seconds
+[0m15:37:18.485417 [info ] [Thread-1 (]: 1 of 23 PASS accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100  [[32mPASS[0m in 1.90s]
+[0m15:37:18.486264 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f
+[0m15:37:18.486632 [debug] [Thread-1 (]: Began running node test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642
+[0m15:37:18.487004 [info ] [Thread-1 (]: 5 of 23 START test not_null_dim_artists_artist_name ............................ [RUN]
+[0m15:37:18.487431 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.accepted_values_fact_tracks_popularity_bucket__unknown__0_24__25_49__50_74__75_100.6894a2b10f, now test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642)
+[0m15:37:18.487737 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642
+[0m15:37:18.492070 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642"
+[0m15:37:18.492880 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642
+[0m15:37:18.494809 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642"
+[0m15:37:18.495310 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select artist_name
+from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+where artist_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:18.495596 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:18.560220 [info ] [Thread-4 (]: 4 of 23 PASS not_null_dim_artists_artist_id .................................... [[32mPASS[0m in 1.97s]
+[0m15:37:18.560515 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348
+[0m15:37:18.560671 [debug] [Thread-4 (]: Began running node test.spotify_analytics.not_null_dim_genres_genre.941b694282
+[0m15:37:18.560853 [info ] [Thread-4 (]: 6 of 23 START test not_null_dim_genres_genre ................................... [RUN]
+[0m15:37:18.561048 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_dim_artists_artist_id.53f5a0d348, now test.spotify_analytics.not_null_dim_genres_genre.941b694282)
+[0m15:37:18.561181 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.not_null_dim_genres_genre.941b694282
+[0m15:37:18.562983 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.not_null_dim_genres_genre.941b694282"
+[0m15:37:18.563326 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.not_null_dim_genres_genre.941b694282
+[0m15:37:18.564323 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.not_null_dim_genres_genre.941b694282"
+[0m15:37:18.564607 [debug] [Thread-4 (]: On test.spotify_analytics.not_null_dim_genres_genre.941b694282: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_dim_genres_genre.941b694282"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select genre
+from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+where genre is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:18.564748 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:37:18.609450 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:669a5ec8-cfb0-4b3f-a8bc-cf5cdb799094&page=queryresults
+[0m15:37:18.734995 [debug] [Thread-2 (]: SQL status: OK in 0.125 seconds
+[0m15:37:18.830492 [info ] [Thread-3 (]: 3 of 23 PASS not_null_bridge_track_artists_track_id ............................ [[32mPASS[0m in 2.25s]
+[0m15:37:18.831067 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00
+[0m15:37:18.831380 [debug] [Thread-3 (]: Began running node test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704
+[0m15:37:18.831688 [info ] [Thread-3 (]: 7 of 23 START test not_null_dim_genres_genre_id ................................ [RUN]
+[0m15:37:18.832019 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_bridge_track_artists_track_id.f3aa87fb00, now test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704)
+[0m15:37:18.832272 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704
+[0m15:37:18.836405 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704"
+[0m15:37:18.837108 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704
+[0m15:37:18.840319 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704"
+[0m15:37:18.840787 [debug] [Thread-3 (]: On test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select genre_id
+from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+where genre_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:18.841046 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:37:19.047970 [info ] [Thread-2 (]: 2 of 23 PASS not_null_bridge_track_artists_artist_id ........................... [[32mPASS[0m in 2.46s]
+[0m15:37:19.048463 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d
+[0m15:37:19.048738 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m15:37:19.049049 [info ] [Thread-2 (]: 8 of 23 START test not_null_fact_tracks_album_id ............................... [RUN]
+[0m15:37:19.049362 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_bridge_track_artists_artist_id.12c868d81d, now test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f)
+[0m15:37:19.049587 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m15:37:19.052806 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"
+[0m15:37:19.053331 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m15:37:19.055050 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"
+[0m15:37:19.055500 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select album_id
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where album_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:19.055750 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:37:19.656742 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:25d26c72-4ebd-493e-abfe-fdb0f283be25&page=queryresults
+[0m15:37:19.734064 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:90641272-fed4-43dc-b598-b5874502adc3&page=queryresults
+[0m15:37:19.819758 [debug] [Thread-4 (]: SQL status: OK in 0.162 seconds
+[0m15:37:19.846139 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:a4afc400-42fd-4942-a855-b66c2ff6a3d2&page=queryresults
+[0m15:37:19.891841 [debug] [Thread-1 (]: SQL status: OK in 0.156 seconds
+[0m15:37:19.989116 [debug] [Thread-3 (]: SQL status: OK in 0.142 seconds
+[0m15:37:20.123472 [info ] [Thread-4 (]: 6 of 23 PASS not_null_dim_genres_genre ......................................... [[32mPASS[0m in 1.56s]
+[0m15:37:20.124403 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.not_null_dim_genres_genre.941b694282
+[0m15:37:20.124829 [debug] [Thread-4 (]: Began running node test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926
+[0m15:37:20.125414 [info ] [Thread-4 (]: 9 of 23 START test not_null_fact_tracks_genre_id ............................... [RUN]
+[0m15:37:20.126127 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_dim_genres_genre.941b694282, now test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926)
+[0m15:37:20.126497 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926
+[0m15:37:20.130723 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926"
+[0m15:37:20.131532 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926
+[0m15:37:20.133626 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926"
+[0m15:37:20.134198 [debug] [Thread-4 (]: On test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select genre_id
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where genre_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:20.134486 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:37:20.197354 [info ] [Thread-1 (]: 5 of 23 PASS not_null_dim_artists_artist_name .................................. [[32mPASS[0m in 1.71s]
+[0m15:37:20.197810 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642
+[0m15:37:20.197969 [debug] [Thread-1 (]: Began running node test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6
+[0m15:37:20.198134 [info ] [Thread-1 (]: 10 of 23 START test not_null_fact_tracks_popularity ............................ [RUN]
+[0m15:37:20.198311 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_dim_artists_artist_name.6ca0936642, now test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6)
+[0m15:37:20.198435 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6
+[0m15:37:20.200147 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6"
+[0m15:37:20.200482 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6
+[0m15:37:20.201409 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6"
+[0m15:37:20.201655 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select popularity
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where popularity is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:20.201790 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:20.260216 [info ] [Thread-3 (]: 7 of 23 PASS not_null_dim_genres_genre_id ...................................... [[32mPASS[0m in 1.43s]
+[0m15:37:20.260483 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704
+[0m15:37:20.260624 [debug] [Thread-3 (]: Began running node test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec
+[0m15:37:20.260779 [info ] [Thread-3 (]: 11 of 23 START test not_null_fact_tracks_track_id .............................. [RUN]
+[0m15:37:20.260934 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_dim_genres_genre_id.0930df6704, now test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec)
+[0m15:37:20.261046 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec
+[0m15:37:20.262589 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec"
+[0m15:37:20.263730 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec
+[0m15:37:20.265326 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec"
+[0m15:37:20.265559 [debug] [Thread-3 (]: On test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:20.265686 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:37:20.774399 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:4846b76b-3298-4f74-8459-bf758b576f33&page=queryresults
+[0m15:37:20.884901 [debug] [Thread-2 (]: SQL status: OK in 0.109 seconds
+[0m15:37:21.211319 [error] [Thread-2 (]: 8 of 23 FAIL 1 not_null_fact_tracks_album_id ................................... [[31mFAIL 1[0m in 2.16s]
+[0m15:37:21.212676 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m15:37:21.213122 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c
+[0m15:37:21.213563 [info ] [Thread-2 (]: 12 of 23 START test not_null_int_tracks_enriched_track_id ...................... [RUN]
+[0m15:37:21.213994 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f, now test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c)
+[0m15:37:21.214305 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c
+[0m15:37:21.219350 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c"
+[0m15:37:21.221950 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c
+[0m15:37:21.223495 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c"
+[0m15:37:21.224023 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:21.224173 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:37:21.812538 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:f833e5ef-8b99-4bc1-95a9-ed87e27e46b0&page=queryresults
+[0m15:37:21.934909 [debug] [Thread-1 (]: SQL status: OK in 0.121 seconds
+[0m15:37:22.230266 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:0b2c0c48-3938-437a-bcfc-f1876a0dc01a&page=queryresults
+[0m15:37:22.264391 [info ] [Thread-1 (]: 10 of 23 PASS not_null_fact_tracks_popularity .................................. [[32mPASS[0m in 2.07s]
+[0m15:37:22.265468 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6
+[0m15:37:22.265972 [debug] [Thread-1 (]: Began running node test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326
+[0m15:37:22.266557 [info ] [Thread-1 (]: 13 of 23 START test popularity_between_0_and_100_fact_tracks_popularity ........ [RUN]
+[0m15:37:22.267131 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_fact_tracks_popularity.d49c4b56d6, now test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326)
+[0m15:37:22.267448 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326
+[0m15:37:22.272311 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326"
+[0m15:37:22.273215 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326
+[0m15:37:22.274747 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326"
+[0m15:37:22.275274 [debug] [Thread-1 (]: On test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+select * 
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where popularity is not null
+ and (popularity < 0 or popularity > 100)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:22.275559 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:22.379858 [debug] [Thread-2 (]: SQL status: OK in 0.148 seconds
+[0m15:37:22.524330 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:5f80dc58-0cd9-4dca-9d66-6d85fdb8605f&page=queryresults
+[0m15:37:22.646949 [info ] [Thread-2 (]: 12 of 23 PASS not_null_int_tracks_enriched_track_id ............................ [[32mPASS[0m in 1.43s]
+[0m15:37:22.647970 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c
+[0m15:37:22.648471 [debug] [Thread-2 (]: Began running node test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc
+[0m15:37:22.649007 [info ] [Thread-2 (]: 14 of 23 START test relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_  [RUN]
+[0m15:37:22.649549 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_int_tracks_enriched_track_id.74873bad6c, now test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc)
+[0m15:37:22.649898 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc
+[0m15:37:22.657639 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc"
+[0m15:37:22.658486 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc
+[0m15:37:22.660432 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc"
+[0m15:37:22.660981 [debug] [Thread-2 (]: On test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select artist_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`bridge_track_artists`
+    where artist_id is not null
+),
+
+parent as (
+    select artist_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:22.661303 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:37:22.720867 [debug] [Thread-3 (]: SQL status: OK in 0.196 seconds
+[0m15:37:23.018993 [info ] [Thread-3 (]: 11 of 23 PASS not_null_fact_tracks_track_id .................................... [[32mPASS[0m in 2.76s]
+[0m15:37:23.021011 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec
+[0m15:37:23.021651 [debug] [Thread-3 (]: Began running node test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58
+[0m15:37:23.022193 [info ] [Thread-3 (]: 15 of 23 START test relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_  [RUN]
+[0m15:37:23.022726 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_fact_tracks_track_id.e05f9b02ec, now test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58)
+[0m15:37:23.023078 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58
+[0m15:37:23.030425 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58"
+[0m15:37:23.031236 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58
+[0m15:37:23.033151 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58"
+[0m15:37:23.033980 [debug] [Thread-3 (]: On test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select track_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`bridge_track_artists`
+    where track_id is not null
+),
+
+parent as (
+    select track_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:23.034286 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:37:24.098095 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:13c93499-ecbf-4e22-83d1-0e4c53c92e33&page=queryresults
+[0m15:37:24.204067 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:6c165252-b9d7-4cb3-ba9f-0abe6c1926c8&page=queryresults
+[0m15:37:24.272101 [debug] [Thread-1 (]: SQL status: OK in 0.173 seconds
+[0m15:37:24.374593 [debug] [Thread-4 (]: SQL status: OK in 0.169 seconds
+[0m15:37:24.601616 [info ] [Thread-1 (]: 13 of 23 PASS popularity_between_0_and_100_fact_tracks_popularity .............. [[32mPASS[0m in 2.33s]
+[0m15:37:24.602573 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326
+[0m15:37:24.602969 [debug] [Thread-1 (]: Began running node test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4
+[0m15:37:24.603396 [info ] [Thread-1 (]: 16 of 23 START test relationships_fact_tracks_album_id__album_id__ref_dim_albums_  [RUN]
+[0m15:37:24.603880 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.popularity_between_0_and_100_fact_tracks_popularity.b231651326, now test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4)
+[0m15:37:24.604197 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4
+[0m15:37:24.610909 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4"
+[0m15:37:24.612147 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4
+[0m15:37:24.614516 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4"
+[0m15:37:24.615208 [debug] [Thread-1 (]: On test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select album_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+    where album_id is not null
+),
+
+parent as (
+    select album_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`dim_albums`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:24.615522 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:24.718497 [info ] [Thread-4 (]: 9 of 23 PASS not_null_fact_tracks_genre_id ..................................... [[32mPASS[0m in 4.59s]
+[0m15:37:24.718805 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926
+[0m15:37:24.718981 [debug] [Thread-4 (]: Began running node test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7
+[0m15:37:24.719205 [info ] [Thread-4 (]: 17 of 23 START test relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_  [RUN]
+[0m15:37:24.719475 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.not_null_fact_tracks_genre_id.818b996926, now test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7)
+[0m15:37:24.719648 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7
+[0m15:37:24.722176 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7"
+[0m15:37:24.723410 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7
+[0m15:37:24.724536 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7"
+[0m15:37:24.725014 [debug] [Thread-4 (]: On test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select artist_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+    where artist_id is not null
+),
+
+parent as (
+    select artist_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:24.725192 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:37:24.774433 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:854b48c2-45dd-47fd-a0e0-6df18345e08b&page=queryresults
+[0m15:37:24.897624 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:6acdff7a-6194-4fd4-879d-44a12551f998&page=queryresults
+[0m15:37:24.961384 [debug] [Thread-2 (]: SQL status: OK in 0.187 seconds
+[0m15:37:25.069799 [debug] [Thread-3 (]: SQL status: OK in 0.172 seconds
+[0m15:37:25.218752 [info ] [Thread-2 (]: 14 of 23 PASS relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_  [[32mPASS[0m in 2.57s]
+[0m15:37:25.221255 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc
+[0m15:37:25.221830 [debug] [Thread-2 (]: Began running node test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511
+[0m15:37:25.222381 [info ] [Thread-2 (]: 18 of 23 START test relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_  [RUN]
+[0m15:37:25.223251 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.relationships_bridge_track_artists_artist_id__artist_id__ref_dim_artists_.728df41dcc, now test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511)
+[0m15:37:25.223667 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511
+[0m15:37:25.228928 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511"
+[0m15:37:25.230745 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511
+[0m15:37:25.233968 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511"
+[0m15:37:25.234694 [debug] [Thread-2 (]: On test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select genre_id as from_field
+    from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+    where genre_id is not null
+),
+
+parent as (
+    select genre_id as to_field
+    from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:25.234983 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:37:25.355208 [info ] [Thread-3 (]: 15 of 23 PASS relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_  [[32mPASS[0m in 2.33s]
+[0m15:37:25.355553 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58
+[0m15:37:25.355748 [debug] [Thread-3 (]: Began running node test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40
+[0m15:37:25.355951 [info ] [Thread-3 (]: 19 of 23 START test unique_dim_artists_artist_id ............................... [RUN]
+[0m15:37:25.356178 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.relationships_bridge_track_artists_track_id__track_id__ref_fact_tracks_.5bc5abbf58, now test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40)
+[0m15:37:25.356350 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40
+[0m15:37:25.359666 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40"
+[0m15:37:25.360070 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40
+[0m15:37:25.361216 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40"
+[0m15:37:25.361530 [debug] [Thread-3 (]: On test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select artist_id as unique_field
+  from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+  where artist_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:25.361706 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:37:26.247455 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:7846f52c-81b1-4004-acb5-06f3648dfcde&page=queryresults
+[0m15:37:26.364098 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:749809b5-1a4d-4fb7-a31c-d8dbc83e3a4f&page=queryresults
+[0m15:37:26.384008 [debug] [Thread-1 (]: SQL status: OK in 0.135 seconds
+[0m15:37:26.509027 [debug] [Thread-4 (]: SQL status: OK in 0.144 seconds
+[0m15:37:26.644864 [info ] [Thread-1 (]: 16 of 23 PASS relationships_fact_tracks_album_id__album_id__ref_dim_albums_ .... [[32mPASS[0m in 2.04s]
+[0m15:37:26.645637 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4
+[0m15:37:26.646009 [debug] [Thread-1 (]: Began running node test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a
+[0m15:37:26.646428 [info ] [Thread-1 (]: 20 of 23 START test unique_dim_genres_genre_id ................................. [RUN]
+[0m15:37:26.646910 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.relationships_fact_tracks_album_id__album_id__ref_dim_albums_.059ff3daa4, now test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a)
+[0m15:37:26.647248 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a
+[0m15:37:26.651218 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a"
+[0m15:37:26.652011 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a
+[0m15:37:26.653976 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a"
+[0m15:37:26.654596 [debug] [Thread-1 (]: On test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select genre_id as unique_field
+  from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+  where genre_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:26.654860 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:26.765219 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:36a1c11c-8305-43f2-b1bd-c1037ada5043&page=queryresults
+[0m15:37:26.770065 [info ] [Thread-4 (]: 17 of 23 PASS relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_ . [[32mPASS[0m in 2.05s]
+[0m15:37:26.770346 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7
+[0m15:37:26.770516 [debug] [Thread-4 (]: Began running node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m15:37:26.770698 [info ] [Thread-4 (]: 21 of 23 START test unique_fact_tracks_track_id ................................ [RUN]
+[0m15:37:26.770897 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.relationships_fact_tracks_artist_id__artist_id__ref_dim_artists_.478186dcd7, now test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c)
+[0m15:37:26.771044 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m15:37:26.773157 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"
+[0m15:37:26.773524 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m15:37:26.774729 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"
+[0m15:37:26.775052 [debug] [Thread-4 (]: On test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:26.775233 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:37:26.850013 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:604659d2-d9ad-4c38-8f46-aad0551beeaa&page=queryresults
+[0m15:37:26.939051 [debug] [Thread-3 (]: SQL status: OK in 0.174 seconds
+[0m15:37:27.002371 [debug] [Thread-2 (]: SQL status: OK in 0.152 seconds
+[0m15:37:27.252319 [info ] [Thread-3 (]: 19 of 23 PASS unique_dim_artists_artist_id ..................................... [[32mPASS[0m in 1.90s]
+[0m15:37:27.254680 [info ] [Thread-2 (]: 18 of 23 PASS relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_ .... [[32mPASS[0m in 2.03s]
+[0m15:37:27.255185 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40
+[0m15:37:27.255624 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511
+[0m15:37:27.255982 [debug] [Thread-3 (]: Began running node test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba
+[0m15:37:27.256388 [debug] [Thread-2 (]: Began running node unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates
+[0m15:37:27.256747 [info ] [Thread-3 (]: 22 of 23 START test unique_int_tracks_enriched_track_id ........................ [RUN]
+[0m15:37:27.257099 [info ] [Thread-2 (]: 23 of 23 START unit_test stg_tracks::stg_tracks_duration_minutes_calculates .... [RUN]
+[0m15:37:27.257451 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.unique_dim_artists_artist_id.73b124aa40, now test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba)
+[0m15:37:27.257756 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.relationships_fact_tracks_genre_id__genre_id__ref_dim_genres_.2bb821e511, now unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates)
+[0m15:37:27.258046 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba
+[0m15:37:27.258297 [debug] [Thread-2 (]: Began compiling node unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates
+[0m15:37:27.263988 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba"
+[0m15:37:27.264267 [debug] [Thread-2 (]: Began executing node unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates
+[0m15:37:27.288447 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:37:27.337968 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba
+[0m15:37:27.341276 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba"
+[0m15:37:27.341711 [debug] [Thread-3 (]: On test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:37:27.341855 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:37:27.715754 [debug] [Thread-2 (]: Writing injected SQL for node "unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates"
+[0m15:37:27.725182 [debug] [Thread-2 (]: Writing injected SQL for node "unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates"
+[0m15:37:27.746123 [debug] [Thread-2 (]: On unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates"} */
+
+    
+  
+    
+
+    create or replace table `emilys-analytics`.`spotify_analytics`.`stg_tracks_duration_minutes_calculates__dbt_tmp`
+      
+    
+    
+
+    
+    OPTIONS(
+      expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 12 hour)
+    )
+    as (
+      select * from (
+        with  __dbt__cte__spotify__raw_spotify_tracks as (
+
+-- Fixture for raw_spotify_tracks
+select safe_cast(null as INT64) as `int64_field_0`, safe_cast('''t1''' as STRING) as `track_id`, safe_cast('''Artist A''' as STRING) as `artists`, safe_cast('''Test Album''' as STRING) as `album_name`, safe_cast('''Test Track''' as STRING) as `track_name`, safe_cast(50 as INT64) as `popularity`, safe_cast(180000 as INT64) as `duration_ms`, safe_cast(null as BOOLEAN) as `explicit`, safe_cast(0.5 as FLOAT64) as `danceability`, safe_cast(0.5 as FLOAT64) as `energy`, safe_cast(null as INT64) as `key`, safe_cast(null as FLOAT64) as `loudness`, safe_cast(null as INT64) as `mode`, safe_cast(null as FLOAT64) as `speechiness`, safe_cast(null as FLOAT64) as `acousticness`, safe_cast(null as FLOAT64) as `instrumentalness`, safe_cast(null as FLOAT64) as `liveness`, safe_cast(null as FLOAT64) as `valence`, safe_cast(120 as FLOAT64) as `tempo`, safe_cast(null as INT64) as `time_signature`, safe_cast('''Pop''' as STRING) as `track_genre`
+), source as (
+    select *
+    from __dbt__cte__spotify__raw_spotify_tracks
+
+),
+
+ranked as (
+  select *, 
+    row_number() over (
+      partition by track_id
+      order by popularity desc nulls last, track_name asc
+    ) as rn
+  from source
+),
+
+deduped as (
+  select *
+  from ranked
+  where rn = 1 
+),
+
+cleaned as ( -- This is also know as 'renamed as'.
+    
+  select -- keeping our string values in a chunk together.
+    cast(track_id as string) as track_id,
+    cast(track_name as string) as track_name,
+    cast(artists as string) as artists,
+    cast(album_name as string) as album_name,
+
+    -- next we need to make lowercase and trim.
+    lower(trim(cast(track_genre as string))) as genre,
+
+    -- next we keep any int64 values together. 
+    cast(popularity as int64) as popularity,
+    cast(duration_ms as int64) as duration_ms,
+
+    -- keep our float64 values together. 
+    cast(danceability as float64) as danceability,
+    cast(energy as float64) as energy,
+    cast(tempo as float64) as tempo
+
+  from deduped
+),
+
+final as (
+
+  select
+    track_id,
+    track_name,
+    artists,
+    album_name,
+    genre,
+    popularity,
+    danceability,
+    energy,
+    tempo,
+    duration_ms,
+
+    
+  safe_divide(cast(duration_ms as float64), 60000)
+ as duration_minutes
+
+    from cleaned
+)
+
+select * from final
+    ) as __dbt_sbq
+    where false and current_timestamp() = current_timestamp()
+    limit 0
+
+    );
+  
+  
+[0m15:37:27.793291 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:edf67a78-ba2e-4f64-a672-3adc5da999c1&page=queryresults
+[0m15:37:27.927574 [debug] [Thread-1 (]: SQL status: OK in 0.134 seconds
+[0m15:37:28.016088 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:5ff42448-eba0-478c-82a3-a9eea3b8b36a&page=queryresults
+[0m15:37:28.175610 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:aa23960e-1bb6-45b3-98d8-10a5f87f93c0&page=queryresults
+[0m15:37:28.195722 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:bbac6c70-2be2-4f6f-9628-fdaea547e574&page=queryresults
+[0m15:37:28.294963 [info ] [Thread-1 (]: 20 of 23 PASS unique_dim_genres_genre_id ....................................... [[32mPASS[0m in 1.65s]
+[0m15:37:28.296055 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a
+[0m15:37:28.313003 [debug] [Thread-3 (]: SQL status: OK in 0.116 seconds
+[0m15:37:28.351262 [debug] [Thread-4 (]: SQL status: OK in 0.174 seconds
+[0m15:37:28.583487 [info ] [Thread-3 (]: 22 of 23 PASS unique_int_tracks_enriched_track_id .............................. [[32mPASS[0m in 1.33s]
+[0m15:37:28.584443 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba
+[0m15:37:28.657137 [error] [Thread-4 (]: 21 of 23 FAIL 2110 unique_fact_tracks_track_id ................................. [[31mFAIL 2110[0m in 1.89s]
+[0m15:37:28.658072 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m15:37:29.439127 [debug] [Thread-2 (]: SQL status: OK in 1.422 seconds
+[0m15:37:29.724675 [debug] [Thread-2 (]: Writing runtime sql for node "unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates"
+[0m15:37:29.726161 [debug] [Thread-2 (]: On unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates"} */
+-- Build actual result given inputs
+with dbt_internal_unit_test_actual as (
+  select
+    `track_id`,`duration_minutes`, '''actual''' as `actual_or_expected`
+  from (
+    with  __dbt__cte__spotify__raw_spotify_tracks as (
+
+-- Fixture for raw_spotify_tracks
+select safe_cast(null as INT64) as `int64_field_0`, safe_cast('''t1''' as STRING) as `track_id`, safe_cast('''Artist A''' as STRING) as `artists`, safe_cast('''Test Album''' as STRING) as `album_name`, safe_cast('''Test Track''' as STRING) as `track_name`, safe_cast(50 as INT64) as `popularity`, safe_cast(180000 as INT64) as `duration_ms`, safe_cast(null as BOOLEAN) as `explicit`, safe_cast(0.5 as FLOAT64) as `danceability`, safe_cast(0.5 as FLOAT64) as `energy`, safe_cast(null as INT64) as `key`, safe_cast(null as FLOAT64) as `loudness`, safe_cast(null as INT64) as `mode`, safe_cast(null as FLOAT64) as `speechiness`, safe_cast(null as FLOAT64) as `acousticness`, safe_cast(null as FLOAT64) as `instrumentalness`, safe_cast(null as FLOAT64) as `liveness`, safe_cast(null as FLOAT64) as `valence`, safe_cast(120 as FLOAT64) as `tempo`, safe_cast(null as INT64) as `time_signature`, safe_cast('''Pop''' as STRING) as `track_genre`
+), source as (
+    select *
+    from __dbt__cte__spotify__raw_spotify_tracks
+
+),
+
+ranked as (
+  select *, 
+    row_number() over (
+      partition by track_id
+      order by popularity desc nulls last, track_name asc
+    ) as rn
+  from source
+),
+
+deduped as (
+  select *
+  from ranked
+  where rn = 1 
+),
+
+cleaned as ( -- This is also know as 'renamed as'.
+    
+  select -- keeping our string values in a chunk together.
+    cast(track_id as string) as track_id,
+    cast(track_name as string) as track_name,
+    cast(artists as string) as artists,
+    cast(album_name as string) as album_name,
+
+    -- next we need to make lowercase and trim.
+    lower(trim(cast(track_genre as string))) as genre,
+
+    -- next we keep any int64 values together. 
+    cast(popularity as int64) as popularity,
+    cast(duration_ms as int64) as duration_ms,
+
+    -- keep our float64 values together. 
+    cast(danceability as float64) as danceability,
+    cast(energy as float64) as energy,
+    cast(tempo as float64) as tempo
+
+  from deduped
+),
+
+final as (
+
+  select
+    track_id,
+    track_name,
+    artists,
+    album_name,
+    genre,
+    popularity,
+    danceability,
+    energy,
+    tempo,
+    duration_ms,
+
+    
+  safe_divide(cast(duration_ms as float64), 60000)
+ as duration_minutes
+
+    from cleaned
+)
+
+select * from final
+  ) _dbt_internal_unit_test_actual
+),
+-- Build expected result
+dbt_internal_unit_test_expected as (
+  select
+    `track_id`, `duration_minutes`, '''expected''' as `actual_or_expected`
+  from (
+    select safe_cast('''t1''' as STRING) as `track_id`, safe_cast(3.0 as FLOAT64) as `duration_minutes`
+  ) _dbt_internal_unit_test_expected
+)
+-- Union actual and expected results
+select * from dbt_internal_unit_test_actual
+union all
+select * from dbt_internal_unit_test_expected
+[0m15:37:30.137908 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:a0c6c3bb-c8a5-467e-a369-fa3094f44153&page=queryresults
+[0m15:37:30.282570 [debug] [Thread-2 (]: SQL status: OK in 0.144 seconds
+[0m15:37:30.667705 [info ] [Thread-2 (]: 23 of 23 PASS stg_tracks::stg_tracks_duration_minutes_calculates ............... [[32mPASS[0m in 3.41s]
+[0m15:37:30.668417 [debug] [Thread-2 (]: Finished running node unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates
+[0m15:37:30.669806 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:37:30.731520 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:37:30.731751 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_dim_genres_genre_id.cf6959b42a' was properly closed.
+[0m15:37:30.731857 [debug] [MainThread]: Connection 'unit_test.spotify_analytics.stg_tracks.stg_tracks_duration_minutes_calculates' was properly closed.
+[0m15:37:30.731951 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_int_tracks_enriched_track_id.b351cd62ba' was properly closed.
+[0m15:37:30.732039 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c' was properly closed.
+[0m15:37:30.732180 [info ] [MainThread]: 
+[0m15:37:30.732314 [info ] [MainThread]: Finished running 22 data tests, 1 unit test in 0 hours 0 minutes and 14.63 seconds (14.63s).
+[0m15:37:30.733551 [debug] [MainThread]: Command end result
+[0m15:37:30.747113 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m15:37:30.747867 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m15:37:30.750982 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m15:37:30.751128 [info ] [MainThread]: 
+[0m15:37:30.751273 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m15:37:30.751377 [info ] [MainThread]: 
+[0m15:37:30.751514 [error] [MainThread]: [31mFailure in test not_null_fact_tracks_album_id (models/marts/marts.yml)[0m
+[0m15:37:30.751624 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m15:37:30.751713 [info ] [MainThread]: 
+[0m15:37:30.751818 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/marts.yml/not_null_fact_tracks_album_id.sql
+[0m15:37:30.751905 [info ] [MainThread]: 
+[0m15:37:30.752007 [error] [MainThread]: [31mFailure in test unique_fact_tracks_track_id (models/marts/marts.yml)[0m
+[0m15:37:30.752108 [error] [MainThread]:   Got 2110 results, configured to fail if != 0
+[0m15:37:30.752187 [info ] [MainThread]: 
+[0m15:37:30.752284 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/marts.yml/unique_fact_tracks_track_id.sql
+[0m15:37:30.752375 [info ] [MainThread]: 
+[0m15:37:30.752476 [info ] [MainThread]: Done. PASS=21 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=23
+[0m15:37:30.754565 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 17.361221, "process_in_blocks": "0", "process_kernel_time": 1.141699, "process_mem_max_rss": "422625280", "process_out_blocks": "0", "process_user_time": 4.527538}
+[0m15:37:30.754724 [debug] [MainThread]: Command `dbt test` failed at 15:37:30.754692 after 17.36 seconds
+[0m15:37:30.754860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfb6190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd4f4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e823110>]}
+[0m15:37:30.754990 [debug] [MainThread]: Flushing usage events
+[0m15:37:31.409686 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:10:08.132762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b659d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b6dc2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b6dc950>]}
+
+
+============================== 16:10:08.135196 | 930326d6-08a0-462f-81c3-46f53f77094d ==============================
+[0m16:10:08.135196 [info ] [MainThread]: Running with dbt=1.11.5
+[0m16:10:08.135437 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'partial_parse': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'use_colors': 'True', 'fail_fast': 'False', 'debug': 'False', 'printer_width': '80', 'empty': 'False', 'warn_error': 'None', 'profiles_dir': '/Users/emilyyoung/.dbt', 'write_json': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'version_check': 'True', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'use_experimental_parser': 'False', 'target_path': 'None', 'invocation_command': 'dbt run --select dim_albums fact_tracks', 'quiet': 'False', 'indirect_selection': 'eager'}
+[0m16:10:11.351348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '930326d6-08a0-462f-81c3-46f53f77094d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b6731d0>]}
+[0m16:10:11.370818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '930326d6-08a0-462f-81c3-46f53f77094d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ac91d0>]}
+[0m16:10:11.371054 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m16:10:11.474540 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m16:10:11.544078 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m16:10:11.544475 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/bridge_track_artists.sql
+[0m16:10:11.544577 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/fact_tracks.sql
+[0m16:10:11.544691 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/dim_albums.sql
+[0m16:10:11.704188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '930326d6-08a0-462f-81c3-46f53f77094d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9aee10>]}
+[0m16:10:11.742660 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m16:10:11.743624 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m16:10:11.753975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '930326d6-08a0-462f-81c3-46f53f77094d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bba4890>]}
+[0m16:10:11.754167 [info ] [MainThread]: Found 7 models, 22 data tests, 1 source, 656 macros, 1 unit test
+[0m16:10:11.754283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '930326d6-08a0-462f-81c3-46f53f77094d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ba52250>]}
+[0m16:10:11.755042 [info ] [MainThread]: 
+[0m16:10:11.755165 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:10:11.755256 [info ] [MainThread]: 
+[0m16:10:11.755442 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:10:11.756931 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_emilys-analytics'
+[0m16:10:11.757074 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:10:12.395920 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_emilys-analytics, now list_emilys-analytics_spotify_analytics)
+[0m16:10:12.396619 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:10:12.801458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '930326d6-08a0-462f-81c3-46f53f77094d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b5b7a10>]}
+[0m16:10:12.802319 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:10:12.869545 [debug] [Thread-1 (]: Began running node model.spotify_analytics.dim_albums
+[0m16:10:12.869855 [info ] [Thread-1 (]: 1 of 2 START sql view model spotify_analytics.dim_albums ....................... [RUN]
+[0m16:10:12.870055 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_emilys-analytics_spotify_analytics, now model.spotify_analytics.dim_albums)
+[0m16:10:12.870190 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.dim_albums
+[0m16:10:12.873704 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.dim_albums"
+[0m16:10:12.874188 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.dim_albums
+[0m16:10:12.885227 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.dim_albums"
+[0m16:10:12.885867 [debug] [Thread-1 (]: On model.spotify_analytics.dim_albums: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_albums"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`dim_albums`
+  OPTIONS()
+  as with base as (
+
+    select 
+      album_name
+    from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+    where album_name is not null 
+      and trim(album_name) != ''
+
+), 
+
+canonical as (
+
+  select
+    album_name,
+    lower(trim(album_name)) as album_key
+  from base
+
+),
+
+deduped as (
+
+  select
+    album_key,
+    any_value(album_name) as album_name
+  from canonical
+  group by album_key
+
+),
+
+unknown_row as (
+
+  select
+    'unknown' as album_key,
+    'Unknown Album' as album_name
+
+)
+
+select
+  to_hex(md5(cast(coalesce(cast(album_key as string), '_dbt_utils_surrogate_key_null_') as string))) as album_id,
+  album_name,
+  album_key
+from (
+  select * from deduped
+  union all
+  select * from unknown_row
+);
+
+
+[0m16:10:12.886038 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:10:13.916106 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:9697cf33-7ff2-436b-ab42-ff788e3a9179&page=queryresults
+[0m16:10:14.326043 [debug] [Thread-1 (]: SQL status: OK in 0.409 seconds
+[0m16:10:14.379958 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '930326d6-08a0-462f-81c3-46f53f77094d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9cd250>]}
+[0m16:10:14.380370 [info ] [Thread-1 (]: 1 of 2 OK created sql view model spotify_analytics.dim_albums .................. [[32mCREATE VIEW (0 processed)[0m in 1.51s]
+[0m16:10:14.380635 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.dim_albums
+[0m16:10:14.380954 [debug] [Thread-3 (]: Began running node model.spotify_analytics.fact_tracks
+[0m16:10:14.381295 [info ] [Thread-3 (]: 2 of 2 START sql view model spotify_analytics.fact_tracks ...................... [RUN]
+[0m16:10:14.381528 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.spotify_analytics.fact_tracks'
+[0m16:10:14.381668 [debug] [Thread-3 (]: Began compiling node model.spotify_analytics.fact_tracks
+[0m16:10:14.383461 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_analytics.fact_tracks"
+[0m16:10:14.383956 [debug] [Thread-3 (]: Began executing node model.spotify_analytics.fact_tracks
+[0m16:10:14.385227 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_analytics.fact_tracks"
+[0m16:10:14.385552 [debug] [Thread-3 (]: On model.spotify_analytics.fact_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.fact_tracks"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+  OPTIONS()
+  as with tracks as (
+  
+  select *
+  from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+
+),
+
+artists as (
+
+  select artist_id, artist_name, artist_key
+  from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+
+),
+
+genres as (
+
+  select genre_id, genre
+  from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+
+),
+
+albums as (
+
+  select album_id, album_name, album_key
+  from `emilys-analytics`.`spotify_analytics`.`dim_albums`
+
+),
+
+final as (
+
+  select 
+    t.track_id, 
+
+    -- below is the foreign keys for relationship tests
+    a.artist_id,
+    g.genre_id,
+    al.album_id,
+
+    -- keep natural keys too (for debugging)
+    t.artists,
+    t.genre,
+    t.track_name,
+    t.album_name, 
+
+    -- below is our measurements
+    t.popularity, 
+    t.duration_minutes,
+    t.danceability,
+    t.energy,
+    t.tempo,
+
+    -- below is our buckets 
+    t.popularity_bucket,
+    t.duration_bucket,
+    t.danceability_bucket,
+    t.energy_bucket,
+    t.tempo_bucket
+
+  from tracks as t
+
+  -- the artist join below (is a map to "primary artist" which is the first artist in the ';' separated list)
+  left join artists as a
+    on a.artist_key = lower(trim(split(coalesce(t.artists, ''), ';')[safe_offset(0)]))
+
+  left join genres as g 
+    on lower(trim(g.genre)) = lower(trim(t.genre))
+
+  left join albums as al
+    on al.album_key = coalesce(lower(trim(nullif(t.album_name, ''))), 'unknown')
+)
+
+select * from final;
+
+
+[0m16:10:14.385740 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:10:15.500806 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:f5069271-ca90-402e-be0c-01c47e4f0ea0&page=queryresults
+[0m16:10:15.886324 [debug] [Thread-3 (]: SQL status: OK in 0.384 seconds
+[0m16:10:15.892377 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '930326d6-08a0-462f-81c3-46f53f77094d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bb12290>]}
+[0m16:10:15.893426 [info ] [Thread-3 (]: 2 of 2 OK created sql view model spotify_analytics.fact_tracks ................. [[32mCREATE VIEW (0 processed)[0m in 1.51s]
+[0m16:10:15.893944 [debug] [Thread-3 (]: Finished running node model.spotify_analytics.fact_tracks
+[0m16:10:15.895159 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:10:15.958022 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:10:15.958261 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_albums' was properly closed.
+[0m16:10:15.958363 [debug] [MainThread]: Connection 'model.spotify_analytics.fact_tracks' was properly closed.
+[0m16:10:15.958507 [info ] [MainThread]: 
+[0m16:10:15.958646 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 4.20 seconds (4.20s).
+[0m16:10:15.958958 [debug] [MainThread]: Command end result
+[0m16:10:15.973254 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m16:10:15.974149 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m16:10:15.976528 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m16:10:15.976644 [info ] [MainThread]: 
+[0m16:10:15.976789 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:10:15.976895 [info ] [MainThread]: 
+[0m16:10:15.977006 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m16:10:15.979752 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.88372, "process_in_blocks": "0", "process_kernel_time": 1.335619, "process_mem_max_rss": "418136064", "process_out_blocks": "0", "process_user_time": 3.047288}
+[0m16:10:15.979919 [debug] [MainThread]: Command `dbt run` succeeded at 16:10:15.979888 after 7.88 seconds
+[0m16:10:15.980050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b6dc8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074c1ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073ba090>]}
+[0m16:10:15.980171 [debug] [MainThread]: Flushing usage events
+[0m16:10:16.660502 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:10:23.506776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be1a350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be1a110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be30ad0>]}
+
+
+============================== 16:10:23.509520 | 87ce8c11-53e6-4990-8385-70febc0962a3 ==============================
+[0m16:10:23.509520 [info ] [MainThread]: Running with dbt=1.11.5
+[0m16:10:23.509778 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'use_experimental_parser': 'False', 'introspect': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'target_path': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'invocation_command': 'dbt test --select not_null_fact_tracks_album_id unique_fact_tracks_track_id', 'static_parser': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'debug': 'False', 'quiet': 'False', 'empty': 'None', 'profiles_dir': '/Users/emilyyoung/.dbt', 'version_check': 'True'}
+[0m16:10:26.550473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '87ce8c11-53e6-4990-8385-70febc0962a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b95b390>]}
+[0m16:10:26.570349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '87ce8c11-53e6-4990-8385-70febc0962a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091fa0d0>]}
+[0m16:10:26.570676 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m16:10:26.675996 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m16:10:26.744473 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:10:26.744678 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:10:26.744775 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:10:26.761747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '87ce8c11-53e6-4990-8385-70febc0962a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bbdbad0>]}
+[0m16:10:26.802892 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m16:10:26.803887 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m16:10:26.818491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '87ce8c11-53e6-4990-8385-70febc0962a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c0d7a50>]}
+[0m16:10:26.818745 [info ] [MainThread]: Found 7 models, 22 data tests, 1 source, 656 macros, 1 unit test
+[0m16:10:26.818869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87ce8c11-53e6-4990-8385-70febc0962a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bef7ed0>]}
+[0m16:10:26.819598 [info ] [MainThread]: 
+[0m16:10:26.819717 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:10:26.819805 [info ] [MainThread]: 
+[0m16:10:26.820003 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:10:26.821500 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_emilys-analytics_spotify_analytics'
+[0m16:10:26.821625 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:10:27.180431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87ce8c11-53e6-4990-8385-70febc0962a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bc1f450>]}
+[0m16:10:27.181801 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:10:27.248558 [debug] [Thread-1 (]: Began running node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m16:10:27.248760 [debug] [Thread-2 (]: Began running node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m16:10:27.249059 [info ] [Thread-1 (]: 1 of 2 START test not_null_fact_tracks_album_id ................................ [RUN]
+[0m16:10:27.249248 [info ] [Thread-2 (]: 2 of 2 START test unique_fact_tracks_track_id .................................. [RUN]
+[0m16:10:27.249447 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_emilys-analytics_spotify_analytics, now test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f)
+[0m16:10:27.249630 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c'
+[0m16:10:27.249756 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m16:10:27.249876 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m16:10:27.257922 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"
+[0m16:10:27.260287 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"
+[0m16:10:27.260690 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m16:10:27.268623 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"
+[0m16:10:27.268774 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m16:10:27.269737 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"
+[0m16:10:27.270011 [debug] [Thread-2 (]: On test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:10:27.270208 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:10:27.270361 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select album_id
+from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+where album_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:10:27.270568 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:10:29.073532 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:c87ae56f-bd2b-4421-8652-85ad02c9c1ee&page=queryresults
+[0m16:10:29.154183 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:4f445e9c-9747-4f32-8606-34aaf073eeba&page=queryresults
+[0m16:10:29.284187 [debug] [Thread-1 (]: SQL status: OK in 0.209 seconds
+[0m16:10:29.343849 [debug] [Thread-2 (]: SQL status: OK in 0.189 seconds
+[0m16:10:29.685743 [info ] [Thread-1 (]: 1 of 2 PASS not_null_fact_tracks_album_id ...................................... [[32mPASS[0m in 2.44s]
+[0m16:10:29.687420 [error] [Thread-2 (]: 2 of 2 FAIL 2 unique_fact_tracks_track_id ...................................... [[31mFAIL 2[0m in 2.44s]
+[0m16:10:29.688098 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f
+[0m16:10:29.688498 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m16:10:29.689662 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:10:29.751468 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:10:29.751668 [debug] [MainThread]: Connection 'test.spotify_analytics.not_null_fact_tracks_album_id.0c5b024b9f' was properly closed.
+[0m16:10:29.751766 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c' was properly closed.
+[0m16:10:29.751887 [info ] [MainThread]: 
+[0m16:10:29.752018 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 2.93 seconds (2.93s).
+[0m16:10:29.752318 [debug] [MainThread]: Command end result
+[0m16:10:29.766295 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m16:10:29.767115 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m16:10:29.769681 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m16:10:29.769796 [info ] [MainThread]: 
+[0m16:10:29.769934 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:10:29.770037 [info ] [MainThread]: 
+[0m16:10:29.770170 [error] [MainThread]: [31mFailure in test unique_fact_tracks_track_id (models/marts/marts.yml)[0m
+[0m16:10:29.770289 [error] [MainThread]:   Got 2 results, configured to fail if != 0
+[0m16:10:29.770378 [info ] [MainThread]: 
+[0m16:10:29.770489 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/marts.yml/unique_fact_tracks_track_id.sql
+[0m16:10:29.770583 [info ] [MainThread]: 
+[0m16:10:29.770691 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m16:10:29.772863 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 6.3036647, "process_in_blocks": "0", "process_kernel_time": 1.278872, "process_mem_max_rss": "412729344", "process_out_blocks": "0", "process_user_time": 2.84093}
+[0m16:10:29.773063 [debug] [MainThread]: Command `dbt test` failed at 16:10:29.773026 after 6.30 seconds
+[0m16:10:29.773211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be30b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be30890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b75e390>]}
+[0m16:10:29.773350 [debug] [MainThread]: Flushing usage events
+[0m16:10:30.388720 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:29:52.078306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f360d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109fa2b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109faa310>]}
+
+
+============================== 16:29:52.080618 | 2249c609-e75d-4c21-9180-64f7ed403675 ==============================
+[0m16:29:52.080618 [info ] [MainThread]: Running with dbt=1.11.5
+[0m16:29:52.080853 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'profiles_dir': '/Users/emilyyoung/.dbt', 'version_check': 'True', 'target_path': 'None', 'quiet': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt run --select fact_tracks', 'log_format': 'default', 'use_colors': 'True', 'printer_width': '80', 'fail_fast': 'False', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'warn_error': 'None', 'indirect_selection': 'eager', 'empty': 'False', 'introspect': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m16:29:54.966418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2249c609-e75d-4c21-9180-64f7ed403675', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098e39d0>]}
+[0m16:29:54.984856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2249c609-e75d-4c21-9180-64f7ed403675', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073a57d0>]}
+[0m16:29:54.985076 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m16:29:55.084038 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m16:29:55.149885 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m16:29:55.150283 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/bridge_track_artists.sql
+[0m16:29:55.150427 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/fact_tracks.sql
+[0m16:29:55.150533 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/marts.yml
+[0m16:29:55.150627 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/fact_tracks.sql
+[0m16:29:55.306966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2249c609-e75d-4c21-9180-64f7ed403675', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a32f3d0>]}
+[0m16:29:55.344268 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m16:29:55.345089 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m16:29:55.355863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2249c609-e75d-4c21-9180-64f7ed403675', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119c8c410>]}
+[0m16:29:55.356040 [info ] [MainThread]: Found 7 models, 29 data tests, 1 source, 656 macros, 1 unit test
+[0m16:29:55.356155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2249c609-e75d-4c21-9180-64f7ed403675', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a32e3d0>]}
+[0m16:29:55.356817 [info ] [MainThread]: 
+[0m16:29:55.356937 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:29:55.357027 [info ] [MainThread]: 
+[0m16:29:55.357195 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:29:55.357532 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_emilys-analytics'
+[0m16:29:55.357680 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:29:55.987830 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_emilys-analytics, now list_emilys-analytics_spotify_analytics)
+[0m16:29:55.988468 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:29:56.374390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2249c609-e75d-4c21-9180-64f7ed403675', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108843fd0>]}
+[0m16:29:56.375333 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:29:56.442891 [debug] [Thread-1 (]: Began running node model.spotify_analytics.fact_tracks
+[0m16:29:56.443254 [info ] [Thread-1 (]: 1 of 1 START sql view model spotify_analytics.fact_tracks ...................... [RUN]
+[0m16:29:56.443449 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_emilys-analytics_spotify_analytics, now model.spotify_analytics.fact_tracks)
+[0m16:29:56.443583 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.fact_tracks
+[0m16:29:56.447018 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.fact_tracks"
+[0m16:29:56.447319 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.fact_tracks
+[0m16:29:56.457747 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.fact_tracks"
+[0m16:29:56.458060 [debug] [Thread-1 (]: On model.spotify_analytics.fact_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.fact_tracks"} */
+
+
+  create or replace view `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+  OPTIONS()
+  as with tracks as (
+  
+  select *
+  from `emilys-analytics`.`spotify_analytics`.`int_tracks_enriched`
+
+),
+
+artists as (
+
+  select
+    artist_key,
+    any_value(artist_id) as artist_id
+  from `emilys-analytics`.`spotify_analytics`.`dim_artists`
+  group by artist_key
+
+),
+
+genres as (
+
+  select
+    genre,
+    any_value(genre_id) as genre_id
+  from `emilys-analytics`.`spotify_analytics`.`dim_genres`
+  group by genre
+
+),
+
+albums as (
+
+  select
+    album_key,
+    any_value(album_id) as album_id
+  from `emilys-analytics`.`spotify_analytics`.`dim_albums`
+  group by album_key
+
+),
+
+final as (
+
+  select 
+    t.track_id, 
+
+    -- below is the foreign keys for relationship tests
+    a.artist_id,
+    g.genre_id,
+    al.album_id,
+
+    -- keep natural keys too (for debugging)
+    t.artists,
+    t.genre,
+    t.track_name,
+    t.album_name, 
+
+    -- below is our measurements
+    t.popularity, 
+    t.duration_minutes,
+    t.danceability,
+    t.energy,
+    t.tempo,
+
+    -- below is our buckets 
+    t.popularity_bucket,
+    t.duration_bucket,
+    t.danceability_bucket,
+    t.energy_bucket,
+    t.tempo_bucket
+
+  from tracks as t
+
+  -- the artist join below (is a map to "primary artist" which is the first artist in the ';' separated list)
+  left join artists as a
+    on a.artist_key = lower(trim(split(coalesce(t.artists, ''), ';')[safe_offset(0)]))
+
+  left join genres as g 
+    on lower(trim(g.genre)) = lower(trim(t.genre))
+
+  left join albums as al
+    on al.album_key = coalesce(lower(trim(nullif(t.album_name, ''))), 'unknown')
+)
+
+select * from final;
+
+
+[0m16:29:56.458237 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:29:57.431645 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:0f86709d-70d1-4b6e-907c-55c63aedb0b6&page=queryresults
+[0m16:29:57.830596 [debug] [Thread-1 (]: SQL status: OK in 0.398 seconds
+[0m16:29:57.884730 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2249c609-e75d-4c21-9180-64f7ed403675', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a630dd0>]}
+[0m16:29:57.885099 [info ] [Thread-1 (]: 1 of 1 OK created sql view model spotify_analytics.fact_tracks ................. [[32mCREATE VIEW (0 processed)[0m in 1.44s]
+[0m16:29:57.885364 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.fact_tracks
+[0m16:29:57.886010 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:29:57.932358 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:29:57.932476 [debug] [MainThread]: Connection 'model.spotify_analytics.fact_tracks' was properly closed.
+[0m16:29:57.932583 [info ] [MainThread]: 
+[0m16:29:57.932696 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.58 seconds (2.58s).
+[0m16:29:57.932931 [debug] [MainThread]: Command end result
+[0m16:29:57.945021 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m16:29:57.945664 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m16:29:57.947717 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m16:29:57.947811 [info ] [MainThread]: 
+[0m16:29:57.947948 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:29:57.948041 [info ] [MainThread]: 
+[0m16:29:57.948154 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:29:57.950654 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.912351, "process_in_blocks": "0", "process_kernel_time": 1.118594, "process_mem_max_rss": "420691968", "process_out_blocks": "0", "process_user_time": 2.804019}
+[0m16:29:57.950856 [debug] [MainThread]: Command `dbt run` succeeded at 16:29:57.950817 after 5.91 seconds
+[0m16:29:57.950994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109fa95d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a178f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109bea450>]}
+[0m16:29:57.951114 [debug] [MainThread]: Flushing usage events
+[0m16:29:58.616863 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:30:31.486514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfb1a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd47d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c016490>]}
+
+
+============================== 16:30:31.488211 | 1d865414-6ac3-424a-8b5f-0aade201c2ec ==============================
+[0m16:30:31.488211 [info ] [MainThread]: Running with dbt=1.11.5
+[0m16:30:31.488432 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/emilyyoung/.dbt', 'version_check': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'static_parser': 'True', 'warn_error': 'None', 'introspect': 'True', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'fail_fast': 'False', 'target_path': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'invocation_command': 'dbt test --select unique_fact_tracks_track_id', 'log_cache_events': 'False', 'write_json': 'True', 'log_path': '/Users/emilyyoung/spotify-dbt-project/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m16:30:33.949407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1d865414-6ac3-424a-8b5f-0aade201c2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bb90210>]}
+[0m16:30:33.968190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1d865414-6ac3-424a-8b5f-0aade201c2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109416410>]}
+[0m16:30:33.968420 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m16:30:34.062284 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m16:30:34.116054 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:30:34.116242 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:30:34.116333 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:30:34.132450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1d865414-6ac3-424a-8b5f-0aade201c2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a30ba10>]}
+[0m16:30:34.170476 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m16:30:34.171353 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m16:30:34.181271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1d865414-6ac3-424a-8b5f-0aade201c2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c3e1c50>]}
+[0m16:30:34.181472 [info ] [MainThread]: Found 7 models, 29 data tests, 1 source, 656 macros, 1 unit test
+[0m16:30:34.181591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d865414-6ac3-424a-8b5f-0aade201c2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c0c3e90>]}
+[0m16:30:34.182264 [info ] [MainThread]: 
+[0m16:30:34.182379 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:30:34.182490 [info ] [MainThread]: 
+[0m16:30:34.182703 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:30:34.184240 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_emilys-analytics_spotify_analytics'
+[0m16:30:34.184362 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:30:34.606743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d865414-6ac3-424a-8b5f-0aade201c2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bf3d0d0>]}
+[0m16:30:34.607625 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:30:34.674836 [debug] [Thread-1 (]: Began running node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m16:30:34.675164 [info ] [Thread-1 (]: 1 of 1 START test unique_fact_tracks_track_id .................................. [RUN]
+[0m16:30:34.675384 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_emilys-analytics_spotify_analytics, now test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c)
+[0m16:30:34.675522 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m16:30:34.682894 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"
+[0m16:30:34.683232 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m16:30:34.691357 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"
+[0m16:30:34.691644 [debug] [Thread-1 (]: On test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `emilys-analytics`.`spotify_analytics`.`fact_tracks`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:30:34.691789 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:30:36.675828 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=emilys-analytics&j=bq:EU:78987f2b-be67-42a0-898e-b7678772c0fc&page=queryresults
+[0m16:30:36.835589 [debug] [Thread-1 (]: SQL status: OK in 0.158 seconds
+[0m16:30:37.234694 [info ] [Thread-1 (]: 1 of 1 PASS unique_fact_tracks_track_id ........................................ [[32mPASS[0m in 2.56s]
+[0m16:30:37.235577 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c
+[0m16:30:37.236952 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:30:37.299459 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:30:37.299678 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_fact_tracks_track_id.dac5d4079c' was properly closed.
+[0m16:30:37.299802 [info ] [MainThread]: 
+[0m16:30:37.299933 [info ] [MainThread]: Finished running 1 test in 0 hours 0 minutes and 3.12 seconds (3.12s).
+[0m16:30:37.300207 [debug] [MainThread]: Command end result
+[0m16:30:37.314071 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/emilyyoung/spotify-dbt-project/target/manifest.json
+[0m16:30:37.314804 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/emilyyoung/spotify-dbt-project/target/semantic_manifest.json
+[0m16:30:37.317212 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/emilyyoung/spotify-dbt-project/target/run_results.json
+[0m16:30:37.317322 [info ] [MainThread]: 
+[0m16:30:37.317450 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:30:37.317545 [info ] [MainThread]: 
+[0m16:30:37.317648 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:30:37.319707 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 5.8649178, "process_in_blocks": "0", "process_kernel_time": 1.050163, "process_mem_max_rss": "409255936", "process_out_blocks": "0", "process_user_time": 2.549441}
+[0m16:30:37.319880 [debug] [MainThread]: Command `dbt test` succeeded at 16:30:37.319845 after 5.87 seconds
+[0m16:30:37.320012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e29910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d21f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e9da50>]}
+[0m16:30:37.320145 [debug] [MainThread]: Flushing usage events
+[0m16:30:37.973558 [debug] [MainThread]: An error was encountered while trying to flush usage events
