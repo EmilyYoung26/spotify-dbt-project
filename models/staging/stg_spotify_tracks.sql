@@ -1,24 +1,8 @@
 with source as (
     select *
-    from `emilys-analytics`.`spotify_analytics`.`raw_spotify_tracks`
+    from {{ source('spotify', 'raw_spotify_tracks') }}
 
 ),
-
-ranked as (
-  select *, 
-    row_number() over (
-      partition by track_id
-      order by popularity desc nulls last, track_name asc
-    ) as rn
-  from source
-),
-
-deduped as (
-  select *
-  from ranked
-  where rn = 1 
-),
-
 cleaned as ( -- This is also know as 'renamed as'.
     
   select -- keeping our string values in a chunk together.
@@ -39,7 +23,8 @@ cleaned as ( -- This is also know as 'renamed as'.
     cast(energy as float64) as energy,
     cast(tempo as float64) as tempo
 
-  from deduped
+  from source
+  
 ),
 
 final as (
@@ -56,11 +41,9 @@ final as (
     tempo,
     duration_ms,
 
-    
-  safe_divide(cast(duration_ms as float64), 60000)
- as duration_minutes
+    {{ ms_to_minutes('duration_ms') }} as duration_minutes
 
     from cleaned
 )
 
-select * from final
+select * from final 
