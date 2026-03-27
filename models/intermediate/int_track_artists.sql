@@ -4,7 +4,7 @@ with tracks as (
       track_id, 
       track_name, 
       artists
-    from {{ ref('stg_spotify_tracks') }}
+    from {{ ref('int_track_deduped_enriched') }}
     where artists is not null
 
 ), 
@@ -22,7 +22,7 @@ split_artists as (
 
 final as (
 
-    select 
+    select distinct
       track_id, 
       track_name, 
       artist_name
