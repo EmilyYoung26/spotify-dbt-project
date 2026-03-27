@@ -2,80 +2,72 @@ version: 2
 
 models:
   - name: dim_genres
-    columns: 
-      - name: genre_id
-        tests: 
-          - not_null
-          - unique
-
-      - name: genre 
-        tests: 
-          - not_null
-
-  - name: dim_artists
     columns:
-      - name: artist_id
-        tests: 
+      - name: genre
+        tests:
           - not_null
           - unique
 
+  - name: dim_artist
+    columns:
       - name: artist_name
-        tests: 
-          - not_null
-      
-      - name: artist_key
         tests:
           - not_null
           - unique
 
   - name: dim_albums
-    columns: 
-      - name: album_id
-        tests: 
-          - not_null
-          - unique
-
+    columns:
       - name: album_name
         tests:
           - not_null
-      
-      - name: album_key
+          - unique
+
+  - name: dim_track
+    columns:
+      - name: track_id
         tests:
           - not_null
           - unique
-
-  - name: fact_tracks
-    columns: 
-      - name: track_id 
+      - name: track_name
         tests:
           - not_null
-          - unique
 
-      - name: genre_id
-        tests: 
+  - name: fact_track_artist_metrics
+    columns:
+      - name: track_id
+        tests:
           - not_null
           - relationships:
-              arguments: 
-                to: ref('dim_genres')
-                field: genre_id
-          
-      - name: artist_id
-        tests: 
-          - relationships: 
               arguments:
-                to: ref('dim_artists')
-                field: artist_id
+                to: ref('dim_track')
+                field: track_id
 
-      - name: album_id
+      - name: artist_name
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_artist')
+                field: artist_name
+
+      - name: genre
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_genres')
+                field: genre
+
+      - name: album_name
         tests:
           - not_null
           - relationships:
               arguments:
                 to: ref('dim_albums')
-                field: album_id
+                field: album_name
 
       - name: popularity
-        tests: 
+        tests:
           - not_null
           - popularity_between_0_and_100
 
@@ -84,21 +76,3 @@ models:
           - accepted_values:
               arguments:
                 values: ['unknown', '0-24', '25-49', '50-74', '75-100']
-
-  - name: bridge_track_artists
-    columns: 
-      - name: track_id
-        tests:
-          - not_null
-          - relationships:
-              arguments: 
-                to: ref('fact_tracks')
-                field: track_id
-
-      - name: artist_id
-        tests: 
-          - not_null
-          - relationships: 
-              arguments:
-                to: ref('dim_artists')
-                field: artist_id
