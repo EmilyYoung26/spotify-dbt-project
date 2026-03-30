@@ -76,3 +76,18 @@ models:
           - accepted_values:
               arguments:
                 values: ['unknown', '0-24', '25-49', '50-74', '75-100']
+
+  - name: mart_top_artists_by_genre
+    description: "Top 3 artists per genre based on total popularity."
+    columns: 
+      - name: genre
+        tests: 
+          - not null 
+
+      - name: artist_name
+        tests:
+          - not null
+
+      - name: total_popularity
+
+      - name: rank_in_genre

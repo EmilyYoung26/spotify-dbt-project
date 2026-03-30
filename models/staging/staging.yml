@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_spotify_tracks
+    columns:
+      - name: explicit
+        tests:
+          - accepted values:
+              arguments:
+                values: [true, false]
+
+## generic test for explicit column 

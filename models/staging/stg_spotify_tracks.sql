@@ -11,7 +11,7 @@ cleaned as ( -- This is also know as 'renamed as'.
     cast(artists as string) as artists,
     cast(album_name as string) as album_name,
 
-    -- next we need to make lowercase and trim.
+    -- next we need to make lowercase and trim to standardise.
     lower(trim(cast(track_genre as string))) as genre,
 
     -- next we keep any int64 values together. 
@@ -21,7 +21,9 @@ cleaned as ( -- This is also know as 'renamed as'.
     -- keep our float64 values together. 
     cast(danceability as float64) as danceability,
     cast(energy as float64) as energy,
-    cast(tempo as float64) as tempo
+    cast(tempo as float64) as tempo,
+
+    cast(explicit as bool) as explicit
 
   from source
   
@@ -40,6 +42,7 @@ final as (
     energy,
     tempo,
     duration_ms,
+    explicit,
 
     {{ ms_to_minutes('duration_ms') }} as duration_minutes
 
